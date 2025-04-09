@@ -127,25 +127,25 @@ const checklistData = {
     ]
   };
   
-export default function Design() {
+export default function Backend() {
   const [checked, setChecked] = useState({});
 
   useEffect(() => {
-    const saved = localStorage.getItem('designChecklist');
+    const saved = localStorage.getItem('backendChecklist');
     if (saved) {
       setChecked(JSON.parse(saved));
     }
   }, []);
 
   const handleSave = () => {
-    localStorage.setItem('designChecklist', JSON.stringify(checked));
+    localStorage.setItem('backendChecklist', JSON.stringify(checked));
     alert("Checklist saved!");
   };
 
   const handleReset = () => {
     if (confirm("Are you sure you want to reset the checklist?")) {
       setChecked({});
-      localStorage.removeItem('designChecklist');
+      localStorage.removeItem('backendChecklist');
     }
   };
 
@@ -195,7 +195,7 @@ export default function Design() {
       <div className="flex gap-4 mt-10">
         <button
           onClick={handleSave}
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
           Save Checklist
         </button>
