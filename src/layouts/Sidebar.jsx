@@ -13,15 +13,13 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
   return (
     <aside className="w-64 h-screen bg-black text-white flex flex-col justify-between p-4">
-      {/* Logo + Nav */}
       <div>
-        {/* Logo */}
+
         <div className="mb-6 px-2 flex items-center">
           <img src="/logo.png" alt="Spotify" className="w-12" />
           <h1 className='text-green font-bold text-xl'><b>Shubha</b></h1>
         </div>
 
-        {/* Nav Items */}
         <nav className="space-y-4">
           <Link to="/" className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer">
             <Home className="w-5 h-5" />
