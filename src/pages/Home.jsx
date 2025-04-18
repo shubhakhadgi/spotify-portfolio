@@ -15,7 +15,7 @@ export const Home = () => {
         Welcome to My Spotify Portfolio
       </h1>
       <p className="text-lg mb-6">
-        Hi, I'm [Your Name]. This portfolio is inspired by Spotify's sleek
+        Hi, I'm Shubha. This portfolio is inspired by Spotify's sleek
         design. Explore to know more about me.
       </p>
 
