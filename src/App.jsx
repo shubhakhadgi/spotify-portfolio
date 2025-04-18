@@ -1,12 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import './index.css'
+
 import Sidebar from './layouts/Sidebar';
 import Header from './layouts/Header';
+import Player from './layouts/Player';
+
 import Home from './pages/Home'
-import Projects from './pages/Projects';
-import Library from './pages/Library';
-import CreatePlaylist from './pages/CreatePlaylist';
-import LikedSongs from './pages/LikedSongs';
+import About from './pages/About'
+import Projects from './pages/Projects'
+import Skills from './pages/Skills'
+import Blog from './pages/Blog'
+import Experience from './pages/Experience'
 
 function App() {
 
@@ -21,12 +25,15 @@ function App() {
           <main className="flex-1 bg-gray-900 text-white p-4">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/library" element={<Library />} />
-              <Route path="/create-playlist" element={<CreatePlaylist />} />
-              <Route path="/liked-songs" element={<LikedSongs />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/experience" element={<Experience />} />
             </Routes>
           </main>
+
+          <Player/>
         </div>
       </div>
     </Router>
