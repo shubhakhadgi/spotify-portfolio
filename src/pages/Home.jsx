@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaUser, FaCode, FaProjectDiagram, FaBriefcase } from "react-icons/fa";
 
+// Sections array (adjust as needed)
 const sections = [
   {
     title: "About Me",
@@ -31,48 +32,69 @@ const sections = [
 
 const Home = () => {
   return (
-    <main className="flex-1 bg-black text-white p-6 overflow-auto">
-      {/* 🎧 Hero */}
-      <section className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">Welcome, I’m Shubha 👋</h1>
-        <p className="text-gray-300 max-w-lg mb-6">
-          I’m a frontend developer crafting clean, interactive web experiences
-          with React, Tailwind, and love for music-inspired design.
-        </p>
-      </section>
-
-      {/* 🎵 Sections Grid */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-12">
-        {sections.map((section, index) => (
+    <main className="flex-1 bg-black text-white overflow-hidden">
+      {/* 🎧 Hero Section */}
+      <section
+        className="relative w-full h-screen bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/spotify-hero.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center p-6">
+          <h1 className="text-5xl font-bold mb-4">Welcome, I’m Shubha 🎶</h1>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            I’m a frontend developer crafting clean, interactive web experiences
+            with React, Tailwind, and a love for music-inspired design.
+          </p>
           <Link
-            to={section.link}
-            key={index}
-            className="p-6 bg-gray-800 rounded-xl hover:bg-gray-700 transition duration-300"
+            to="/projects"
+            className="bg-green-500 text-black py-3 px-6 rounded-full text-xl font-semibold hover:bg-green-400 transition"
           >
-            <div className="flex flex-col items-center text-center">
-              {section.icon}
-              <h2 className="text-2xl font-semibold text-white">
-                {section.title}
-              </h2>
-              <p className="text-gray-400 text-sm mt-2">{section.desc}</p>
-            </div>
+            View Projects
           </Link>
-        ))}
+        </div>
       </section>
 
-      {/* 🎤 Featured Project */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">🎯 Featured Project</h2>
-        <div className="flex flex-col md:flex-row gap-6 bg-gray-800 p-6 rounded-xl shadow-lg">
+      {/* 🎵 Sections Carousel */}
+      <section className="px-6 py-12">
+        <h2 className="text-3xl font-semibold mb-8 text-white">
+          Explore My World
+        </h2>
+        <div className="flex overflow-x-auto space-x-6">
+          {sections.map((section, index) => (
+            <Link
+              to={section.link}
+              key={index}
+              className="flex-none w-64 bg-gray-800 rounded-xl p-6 transition-transform transform hover:scale-105 hover:bg-gray-700"
+            >
+              <div className="flex flex-col items-center text-center">
+                {section.icon}
+                <h3 className="text-2xl font-semibold text-white mt-4">
+                  {section.title}
+                </h3>
+                <p className="text-gray-400 mt-2">{section.desc}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* 🎶 Featured Project */}
+      <section className="px-6 py-12 bg-gray-800 rounded-xl mb-12 shadow-lg">
+        <h2 className="text-3xl font-semibold mb-8 text-white">
+          🎯 Featured Project
+        </h2>
+        <div className="flex flex-col md:flex-row gap-6">
           <img
             src="/spotify-clone.jpg"
             alt="Spotify Clone"
-            className="w-full md:w-60 h-40 object-cover rounded-md"
+            className="w-full md:w-60 h-60 object-cover rounded-lg transition-transform transform hover:scale-105"
           />
-          <div>
-            <h3 className="text-xl font-bold text-white mb-2">Spotify Clone</h3>
+          <div className="flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Spotify Clone
+            </h3>
             <p className="text-gray-400 mb-4">
-              Built using React, Tailwind CSS, and GSAP for smooth animations.
+              Built using React, Tailwind CSS, and GSAP for smooth animations,
+              this project showcases the Spotify layout and functionality.
             </p>
             <Link to="/projects" className="text-green-500 hover:underline">
               View all projects →
@@ -81,8 +103,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 🧠 Learning Objective Section */}
-      <section className="bg-gray-900 p-6 rounded-xl shadow-inner mt-12">
+      {/* 🎤 Learning Philosophy Section */}
+      <section className="px-6 py-12 bg-gray-900 rounded-xl shadow-inner mt-12">
         <h2 className="text-2xl font-semibold text-white mb-4">
           💡 My Learning Philosophy
         </h2>

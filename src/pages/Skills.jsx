@@ -1,26 +1,48 @@
 import React from "react";
 
-const skills = [
-  { name: "React", icon: "⚛️" },
-  { name: "Tailwind CSS", icon: "🌬️" },
-  { name: "JavaScript", icon: "📜" },
-  { name: "GSAP", icon: "🎞️" },
-  { name: "Bootstrap", icon: "🅱️" },
-  { name: "GitHub", icon: "🐙" },
+const skillsByCategory = [
+  {
+    title: "🔥 Top Skills",
+    items: [
+      { name: "React", icon: "⚛️" },
+      { name: "Tailwind CSS", icon: "🌬️" },
+      { name: "JavaScript", icon: "📜" },
+    ],
+  },
+  {
+    title: "🧰 Tools I Use",
+    items: [
+      { name: "TypeScript", icon: "💻" },
+      { name: "GitHub", icon: "🐙" },
+      { name: "Node.js", icon: "🔨" },
+    ],
+  },
 ];
 
 const Skills = () => {
   return (
-    <main className="flex-1 bg-black text-white p-6">
-      <h1 className="text-3xl font-bold mb-6">My Stack Library</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {skills.map((skill) => (
-          <div
-            key={skill.name}
-            className="bg-gray-800 hover:bg-green-600 transition duration-300 rounded-xl p-6 text-center shadow-md"
-          >
-            <div className="text-4xl mb-2">{skill.icon}</div>
-            <p className="text-lg font-semibold">{skill.name}</p>
+    <main className="min-h-screen bg-neutral-950 text-white px-6 py-20">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-5xl font-extrabold text-white mb-12">
+          Your Dev Library
+        </h1>
+
+        {skillsByCategory.map((section) => (
+          <div key={section.title} className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-green-400">
+              {section.title}
+            </h2>
+            <div className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-green-400/50">
+              {section.items.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex items-center gap-3 bg-neutral-800 hover:bg-green-600 text-white py-3 px-6 rounded-full shadow-md transition duration-300 whitespace-nowrap"
+                >
+                  <span className="text-xl">{skill.icon}</span>
+                  <span className="text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
