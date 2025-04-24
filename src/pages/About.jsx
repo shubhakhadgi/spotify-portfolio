@@ -6,7 +6,7 @@ const About = () => {
       {/* Hero Section */}
       <div className="flex items-center p-8 space-x-6">
         <img
-          src="/avatar.png"
+          src="https://source.unsplash.com/128x128/?portrait,avatar"
           alt="Shubha"
           className="w-32 h-32 rounded-full shadow-lg border-4 border-green-500"
         />
@@ -37,7 +37,7 @@ const About = () => {
         <h2 className="text-xl font-bold mb-4">Now Playing</h2>
         <div className="flex items-center space-x-4">
           <img
-            src="https://source.unsplash.com/album-cover"
+            src="https://source.unsplash.com/150x150/?music,album"
             alt="album art"
             className="w-16 h-16 rounded"
           />
@@ -116,15 +116,15 @@ const About = () => {
           {[
             {
               name: "Kent C. Dodds",
-              img: "https://avatars.githubusercontent.com/u/1500684",
+              img: "https://source.unsplash.com/64x64/?developer",
             },
             {
               name: "Theo",
-              img: "https://avatars.githubusercontent.com/u/6751787",
+              img: "https://source.unsplash.com/64x64/?developer",
             },
             {
               name: "Lee Robinson",
-              img: "https://avatars.githubusercontent.com/u/23662329",
+              img: "https://source.unsplash.com/64x64/?developer",
             },
           ].map((dev) => (
             <div key={dev.name} className="flex flex-col items-center">

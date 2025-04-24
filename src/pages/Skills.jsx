@@ -2,19 +2,28 @@ import React from "react";
 
 const skillsByCategory = [
   {
-    title: "🔥 Top Skills",
+    title: "Top Skills",
     items: [
-      { name: "React", icon: "⚛️" },
-      { name: "Tailwind CSS", icon: "🌬️" },
-      { name: "JavaScript", icon: "📜" },
+      { name: "React", img: "https://source.unsplash.com/64x64/?react" },
+      {
+        name: "Tailwind CSS",
+        img: "https://source.unsplash.com/64x64/?tailwind",
+      },
+      {
+        name: "JavaScript",
+        img: "https://source.unsplash.com/64x64/?javascript",
+      },
     ],
   },
   {
-    title: "🧰 Tools I Use",
+    title: "Tools I Use",
     items: [
-      { name: "TypeScript", icon: "💻" },
-      { name: "GitHub", icon: "🐙" },
-      { name: "Node.js", icon: "🔨" },
+      {
+        name: "TypeScript",
+        img: "https://source.unsplash.com/64x64/?typescript",
+      },
+      { name: "GitHub", img: "https://source.unsplash.com/64x64/?github" },
+      { name: "Node.js", img: "https://source.unsplash.com/64x64/?nodejs" },
     ],
   },
 ];
@@ -38,7 +47,11 @@ const Skills = () => {
                   key={skill.name}
                   className="flex items-center gap-3 bg-neutral-800 hover:bg-green-600 text-white py-3 px-6 rounded-full shadow-md transition duration-300 whitespace-nowrap"
                 >
-                  <span className="text-xl">{skill.icon}</span>
+                  <img
+                    src={skill.img}
+                    alt={skill.name}
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
                   <span className="text-sm font-medium">{skill.name}</span>
                 </div>
               ))}

@@ -61,10 +61,11 @@ const Experience = () => {
       {/* Album Header */}
       <section className="flex flex-col md:flex-row items-end md:items-center p-8 gap-6 bg-gradient-to-r from-green-700 to-green-500">
         <img
-          src="/avatar.png"
+          src="https://images.unsplash.com/photo-1743890286640-b110f4e932e4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Album Art"
           className="w-40 h-40 rounded shadow-lg border-4 border-green-300"
         />
+
         <div>
           <p className="uppercase text-sm text-gray-300">Playlist</p>
           <h1 className="text-5xl font-bold">Shubha’s Career Album</h1>
