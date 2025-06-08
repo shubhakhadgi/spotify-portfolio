@@ -2,11 +2,10 @@ import React from 'react';
 import {
   Home,
   User,
-  FolderKanban,
-  BadgeCheck,
+  Layers,
   PenSquare,
   Briefcase,
-  Globe
+  BarChart3
 } from "lucide-react";
 import { Link } from 'react-router-dom';
 
@@ -40,14 +39,15 @@ const Sidebar = () => {
             to="/projects"
             className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer"
           >
-            <FolderKanban className="w-5 h-5" />
+            <Layers className="w-5 h-5" />
             <span>Projects</span>
           </Link>
           <Link
             to="/skills"
             className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer"
           >
-            <BadgeCheck className="w-5 h-5" />
+            <BarChart3 className="w-5 h-5" />
+
             <span>Skills</span>
           </Link>
           <Link

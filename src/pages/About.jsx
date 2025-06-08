@@ -1,73 +1,8 @@
 import React from "react";
-
-const currentlyBuilding = {
-  title: "Hospital Dashboard",
-  description: "React + Redux + TypeScript + Cypress",
-  img: "/path-to-thumbnail.jpg",
-  progressPercent: 75,
-};
-
-const uiDiscography = [
-  {
-    title: "Toast Notification",
-    tech: "React · Tailwind · Hooks",
-    img: "https://images.unsplash.com/photo-1525186402429-0c11fa2acb90?auto=format&fit=crop&w=200&q=80",
-  },
-  {
-    title: "Spotify Clone",
-    tech: "React · Tailwind · Firebase",
-    img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80",
-  },
-  {
-    title: "Framer Motion Gallery",
-    tech: "React · Framer Motion",
-    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=200&q=80",
-  },
-];
-
-const dailyTools = [
-  { name: "VSCode", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-  { name: "Figma", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name: "Postman", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
-  { name: "Zustand", img: "https://avatars.githubusercontent.com/u/8022770?s=200&v=4" },
-  { name: "Framer Motion", img: "https://framerusercontent.com/images/Framer.svg" },
-];
-
-const tourDates = [
-  "2021 — Wrote my first HTML tag.",
-  "2022 — Deployed a full-stack React app.",
-  "2023 — Mastered Tailwind, Vite, and component design.",
-  "2024 — Launched this Spotify-style portfolio.",
-];
-
-const fansAlsoLike = [
-  {
-    name: "Kent C. Dodds",
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80",
-  },
-  {
-    name: "Theo",
-    img: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=64&q=80",
-  },
-  {
-    name: "Lee Robinson",
-    img: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=64&q=80",
-  },
-  {
-    name: "Sarah Drasner",
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80",
-  },
-  {
-    name: "Wes Bos",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=64&q=80",
-  },
-  {
-    name: "Adrian Twarog",
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80",
-  },
-];
+import data from '../data.json';
 
 const About = () => {
+   const { currentlyBuilding, uiDiscography, tools, tourDates, fansAlsoLike } = data;
   return (
     <main className="flex-1 bg-black text-white font-sans">
       {/* Hero Section */}
@@ -144,7 +79,7 @@ const About = () => {
       <section className="max-w-6xl px-8 py-6">
         <h2 className="text-xl font-bold mb-4">Daily Tools</h2>
         <div className="flex space-x-6 overflow-x-auto scrollbar-hide py-2">
-          {dailyTools.map(({ name, img }) => (
+          {tools.map(({ name, img }) => (
             <div
               key={name}
               tabIndex={0}

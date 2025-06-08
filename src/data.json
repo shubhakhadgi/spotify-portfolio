@@ -1,0 +1,269 @@
+{
+  "currentlyBuilding": {
+    "title": "Hospital Dashboard",
+    "description": "React + Redux + TypeScript + Cypress",
+    "img": "/path-to-thumbnail.jpg",
+    "progressPercent": 75
+  },
+  "uiDiscography": [
+    {
+      "title": "Toast Notification",
+      "tech": "React · Tailwind · Hooks",
+      "img": "https://images.unsplash.com/photo-1525186402429-0c11fa2acb90?auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      "title": "Spotify Clone",
+      "tech": "React · Tailwind · Firebase",
+      "img": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      "title": "Framer Motion Gallery",
+      "tech": "React · Framer Motion",
+      "img": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=200&q=80"
+    }
+  ],
+  "tourDates": [
+    "2021 — Wrote my first HTML tag.",
+    "2022 — Deployed a full-stack React app.",
+    "2023 — Mastered Tailwind, Vite, and component design.",
+    "2024 — Launched this Spotify-style portfolio."
+  ],
+  "fansAlsoLike": [
+    {
+      "name": "Kent C. Dodds",
+      "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80"
+    },
+    {
+      "name": "Theo",
+      "img": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=64&q=80"
+    },
+    {
+      "name": "Lee Robinson",
+      "img": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=64&q=80"
+    },
+    {
+      "name": "Sarah Drasner",
+      "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80"
+    },
+    {
+      "name": "Wes Bos",
+      "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=64&q=80"
+    },
+    {
+      "name": "Adrian Twarog",
+      "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Frontend Intern",
+      "org": "Tech Corp",
+      "time": "Jan 2024 – Apr 2024",
+      "notes": [
+        "Fixed UI bugs across 3 modules",
+        "Implemented page transitions with Framer Motion"
+      ]
+    },
+    {
+      "title": "Web Developer",
+      "org": "Freelance",
+      "time": "2023 – Present",
+      "notes": [
+        "Developed 10+ landing pages",
+        "Built dynamic CMS with React & WordPress"
+      ]
+    },
+    {
+      "title": "Frontend Developer Trainee",
+      "org": "CodeBase Academy",
+      "time": "Jul 2023 – Dec 2023",
+      "notes": [
+        "Completed real-world projects in a team setting",
+        "Worked with Git workflows and component architecture"
+      ]
+    },
+    {
+      "title": "Open Source Contributor",
+      "org": "React Projects",
+      "time": "2024",
+      "notes": [
+        "Contributed to UI libraries and issue resolutions",
+        "Refactored components using Hooks and Context API"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc in Computer Science",
+      "school": "ABC University",
+      "year": "2023",
+      "info": "Specialized in frontend engineering and UI design"
+    }
+  ],
+  "courses": [
+    {
+      "name": "React Front to Back",
+      "platform": "Udemy",
+      "year": "2023"
+    },
+    {
+      "name": "Tailwind Mastery",
+      "platform": "Scrimba",
+      "year": "2024"
+    },
+    {
+      "name": "Frontend Career Path",
+      "platform": "Frontend Masters",
+      "year": "2024"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Spotify Clone",
+      "image": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjY1OXwwfDF8c2VhY2h8M3x8c3BvdGlmeXxlbnwwfHx8fDE2NTg1NjQ0NzM&ixlib=rb-1.2.1&q=80&w=1080",
+      "tech": ["React", "Tailwind", "Zustand"],
+      "description": "Spotify-inspired music streaming UI using Zustand and TailwindCSS.",
+      "link": "https://your-live-demo.com"
+    },
+    {
+      "title": "Blog CMS",
+      "image": "https://images.unsplash.com/photo-1620287341639-d141a3a15cfd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Content management system for blogging with a fully custom theme.",
+      "link": "https://your-live-demo.com"
+    },
+    {
+      "title": "Portfolio v2",
+      "image": "https://images.unsplash.com/photo-1569322977266-acff659212fd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tech": ["Vite", "Tailwind"],
+      "description": "Revamped developer portfolio built using Vite and TailwindCSS.",
+      "link": "https://your-live-demo.com"
+    },
+    {
+      "title": "Kanban Task Manager",
+      "image": "https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjY1OXwwfDF8c2VhY2h8MXx8a2FubmFufGVufDB8fHx8fDE2NTg1NjQ0NzM&ixlib=rb-1.2.1&q=80&w=1080",
+      "tech": ["React", "Drag-and-Drop", "Zustand"],
+      "description": "Trello-style task board with drag & drop and local state management.",
+      "link": "https://your-live-demo.com"
+    }
+  ],
+  "personalProjects": [
+    {
+      "title": "AI Chatbot Portfolio Assistant",
+      "description": "An interactive chatbot that answers questions about my projects using AI and semantic search.",
+      "tech": ["Next.js", "OpenAI API", "Pinecone", "TailwindCSS"],
+      "link": "https://your-chatbot-project-link.com"
+    },
+    {
+      "title": "Code Snippet Manager",
+      "description": "A personal tool for saving, tagging, and searching through reusable code snippets.",
+      "tech": ["React", "TypeScript", "Firebase", "TailwindCSS"],
+      "link": "https://your-code-snippet-manager-link.com"
+    },
+    {
+      "title": "Dev Blog Engine",
+      "description": "A markdown-based blogging platform where I write about JavaScript and React concepts.",
+      "tech": ["Next.js", "MDX", "TailwindCSS"],
+      "link": "https://your-blog-engine-link.com"
+    }
+  ],
+"featured": {
+  "title": "Dashboard App",
+  "artist": "Built with React + RTK + TailwindCSS",
+  "description": "A comprehensive medical dashboard to manage appointments, analytics, and patient information in real-time.",
+  "image": "https://picsum.photos/1600/400?17",
+  "link": "https://hospital-dashboard-by-shubha.vercel.app/",
+  "tech": ["React", "Redux Toolkit", "TailwindCSS"]
+},
+
+  "blogPosts": [
+    {
+      "title": "Mastering React Hooks as a beginner - useCallback()",
+      "subtitle": "React Essentials",
+      "image": "https://picsum.photos/400?5",
+      "link": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usecallback-52oe"
+    },
+    {
+      "title": "useRef Hook: The Silent Helper",
+      "subtitle": "React Essentials",
+      "image": "https://picsum.photos/400?6",
+      "link": "https://dev.to/shubha_k/useref-hook-the-silent-helper-2dpf"
+    },
+    {
+      "title": "React Interview Prep Guide 1: Core Concepts Made Easy",
+      "subtitle": "React Essentials",
+      "image": "https://picsum.photos/400?7",
+      "link": "https://dev.to/shubha_k/jsx-and-babel-react-interview-essentials-3e42"
+    }
+  ],
+"skills": [
+  {
+    "title": "React",
+    "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/react.svg",
+    "level": 85,
+    "description": "Building reusable UI components with React."
+  },
+  {
+    "title": "TypeScript",
+    "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/typescript.svg",
+    "level": 80,
+    "description": "Strongly typed JavaScript for scalable apps."
+  },
+  {
+    "title": "TailwindCSS",
+    "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/tailwindcss.svg",
+    "level": 75,
+    "description": "Utility-first CSS framework for rapid UI development."
+  },
+  {
+    "title": "Redux Toolkit",
+    "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/redux.svg",
+    "level": 70,
+    "description": "Simplified Redux state management for React apps."
+  }
+],
+  "tools": [
+    {
+      "name": "Figma",
+      "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/figma.svg"
+    },
+    {
+      "name": "VS Code",
+      "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/visualstudiocode.svg"
+    },
+    {
+      "name": "GitHub",
+      "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/github.svg"
+    },
+    {
+      "name": "GSAP",
+      "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/greensock.svg"
+    },
+    {
+      "name": "Gulp",
+      "iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/gulp.svg"
+    }
+  ],
+  "categories": [
+    {
+      "title": "Projects",
+      "image": "https://picsum.photos/300?22",
+      "link": "/projects"
+    },
+    {
+      "title": "Blogs",
+      "image": "https://picsum.photos/300?23",
+      "link": "/blogs"
+    },
+    {
+      "title": "Skills",
+      "image": "https://picsum.photos/300?24",
+      "link": "/skills"
+    },
+    {
+      "title": "Experience",
+      "image": "https://picsum.photos/300?25",
+      "link": "/experience"
+    }
+  ]
+}

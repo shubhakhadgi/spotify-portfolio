@@ -1,61 +1,9 @@
 import React from "react";
-import { Play } from "lucide-react"; // npm install lucide-react
-
-const experiences = [
-  {
-    title: "Frontend Intern",
-    org: "Tech Corp",
-    time: "Jan 2024 – Apr 2024",
-    notes: [
-      "Fixed UI bugs across 3 modules",
-      "Implemented page transitions with Framer Motion",
-    ],
-  },
-  {
-    title: "Web Developer",
-    org: "Freelance",
-    time: "2023 – Present",
-    notes: [
-      "Developed 10+ landing pages",
-      "Built dynamic CMS with React & WordPress",
-    ],
-  },
-  {
-    title: "Frontend Developer Trainee",
-    org: "CodeBase Academy",
-    time: "Jul 2023 – Dec 2023",
-    notes: [
-      "Completed real-world projects in a team setting",
-      "Worked with Git workflows and component architecture",
-    ],
-  },
-  {
-    title: "Open Source Contributor",
-    org: "React Projects",
-    time: "2024",
-    notes: [
-      "Contributed to UI libraries and issue resolutions",
-      "Refactored components using Hooks and Context API",
-    ],
-  },
-];
-
-const education = [
-  {
-    degree: "BSc in Computer Science",
-    school: "ABC University",
-    year: "2023",
-    info: "Specialized in frontend engineering and UI design",
-  },
-];
-
-const courses = [
-  { name: "React Front to Back", platform: "Udemy", year: "2023" },
-  { name: "Tailwind Mastery", platform: "Scrimba", year: "2024" },
-  { name: "Frontend Career Path", platform: "Frontend Masters", year: "2024" },
-];
+import { Play } from "lucide-react"; 
+import data from '../data.json';
 
 const Experience = () => {
+  const { experience, education, courses } = data;
   return (
     <main className="bg-gradient-to-b from-[#121212] to-black min-h-screen text-white">
       {/* Album Header */}
@@ -86,7 +34,7 @@ const Experience = () => {
       <section className="px-6 md:px-10 py-10" id="experience">
         <h2 className="text-3xl font-bold mb-6">Tracks</h2>
         <div className="space-y-6">
-          {experiences.map((exp, idx) => (
+          {experience.map((exp, idx) => (
             <div
               key={idx}
               className="flex items-start gap-6 bg-[#181818] hover:bg-[#252525] p-6 rounded-lg transition"

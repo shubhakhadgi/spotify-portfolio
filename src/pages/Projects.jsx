@@ -1,67 +1,16 @@
 import React from "react";
 import { ExternalLink, PlayCircle } from "lucide-react";
-
-const projects = [
-  {
-    title: "Spotify Clone",
-    image:
-      "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjY1OXwwfDF8c2VhY2h8M3x8c3BvdGlmeXxlbnwwfHx8fDE2NTg1NjQ0NzM&ixlib=rb-1.2.1&q=80&w=1080",
-    tech: ["React", "Tailwind", "Zustand"],
-    description: "Spotify-inspired music streaming UI using Zustand and TailwindCSS.",
-    link: "https://your-live-demo.com",
-  },
-  {
-    title: "Blog CMS",
-    image:
-      "https://images.unsplash.com/photo-1620287341639-d141a3a15cfd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tech: ["WordPress", "PHP", "Custom Theme"],
-    description: "Content management system for blogging with a fully custom theme.",
-    link: "https://your-live-demo.com",
-  },
-  {
-    title: "Portfolio v2",
-    image:
-      "https://images.unsplash.com/photo-1569322977266-acff659212fd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tech: ["Vite", "Tailwind"],
-    description: "Revamped developer portfolio built using Vite and TailwindCSS.",
-    link: "https://your-live-demo.com",
-  },
-  {
-    title: "Kanban Task Manager",
-    image:
-      "https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjY1OXwwfDF8c2VhY2h8MXx8a2FubmFufGVufDB8fHx8fDE2NTg1NjQ0NzM&ixlib=rb-1.2.1&q=80&w=1080",
-    tech: ["React", "Drag-and-Drop", "Zustand"],
-    description: "Trello-style task board with drag & drop and local state management.",
-    link: "https://your-live-demo.com",
-  },
-];
-
-const personalProjects = [
-  {
-    title: "Virtual Instrument Player",
-    tech: ["React", "Tone.js"],
-    description: "Play musical instruments with your keyboard.",
-    link: "https://your-personal-demo.com/instrument",
-  },
-  {
-    title: "Weather App",
-    tech: ["React", "OpenWeatherMap API"],
-    description: "Current weather info and forecasts.",
-    link: "https://your-personal-demo.com/weather",
-  },
-  {
-    title: "To-Do App",
-    tech: ["React", "LocalStorage"],
-    description: "Simple task manager with persistent storage.",
-    link: "https://your-personal-demo.com/todo",
-  },
-];
-
+import data from '../data.json';
+import { Layers } from "lucide-react";
 
 const Projects = () => {
+  const { projects, personalProjects } = data;
   return (
     <main className="flex-1 h-screen overflow-y-auto bg-gradient-to-b from-neutral-900 to-black text-white p-6">
-      <h1 className="text-3xl font-bold mb-6">Projects</h1>
+              <div className="flex items-center gap-3 mb-4">
+          <Layers size={32} className="text-green-500" />
+          <h1 className="text-3xl font-bold">Projects</h1>
+        </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {projects.map((project, index) => (
@@ -108,8 +57,8 @@ const Projects = () => {
         ))}
       </div>
 
-      <section className="mt-12 p-6 bg-neutral-900 rounded-lg max-h-[400px] overflow-y-auto">
-  <h2 className="text-2xl font-bold mb-4">Personal Projects Playlist</h2>
+      <section className="mt-12 p-6 bg-neutral-900 rounded-lg">
+        <h2 className="text-2xl font-bold mb-4">Personal Projects Playlist</h2>
   <table className="w-full table-auto border-collapse text-left text-white">
     <thead className="border-b border-gray-700 sticky top-0 bg-neutral-900">
       <tr>
