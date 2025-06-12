@@ -2,22 +2,15 @@ import data from '../data.json';
 
 const Home = () => {
   const { projects, blogPosts, skills, featured, tools, personalProjects, categories } = data;
-  const currentHour = new Date().getHours();
-  const greeting =
-    currentHour < 12
-      ? "Good Morning"
-      : currentHour < 18
-      ? "Good Afternoon"
-      : "Good Evening";
 
   return (
     <main className="flex flex-col gap-12 px-6 py-8 overflow-y-auto bg-black min-h-screen">
       <section className="mb-8">
         <div className="flex items-center justify-between">
           <div className="flex flex-col items-start max-w-3xl">
-            <h1 className="text-4xl text-white font-bold">{greeting}, I'm Shubha!</h1>
+            <h1 className="text-4xl text-white font-bold">Hey there, I'm Shubha!</h1>
             <p className="text-white/80 mt-2 text-lg">
-              I care about how things look, feel, and perform. I design and build interfaces with intent—from layout and state to load time and visual rhythm. This space is a curated archive of everything I’m building, learning, and refining.
+             I'm a front-end developer who designs with purpose and builds with care.  I care about how things look, feel, and work. I design and build with intention—clean layouts, smooth interactions, and fast performance.
             </p>
           </div>
           <div className="flex-shrink-0">
@@ -137,9 +130,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
+  <section>
         <h2 className="text-2xl font-bold text-white mb-4">Side Projects</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {personalProjects.map((project, idx) => (
             <a
               key={idx}
@@ -150,10 +143,11 @@ const Home = () => {
             >
               <img
                 src={project.image}
-                className="w-full h-36 object-cover rounded mb-4"
+                className="w-full object-cover rounded mb-4"
                 alt={project.title}
               />
               <p className="text-white font-semibold hover:text-green transition-colors">{project.title}</p>
+              <p className="text-white/60">{project.description}</p>
             </a>
           ))}
         </div>
@@ -166,18 +160,21 @@ const Home = () => {
       <a
         key={idx}
         href={category.link}
-        className="flex-shrink-0 w-48 rounded-xl bg-white/5 p-3 cursor-pointer transition-shadow duration-300 ease-in-out hover:ring-1 hover:ring-green"
+        className="flex-shrink-0 w-64 rounded-xl bg-white/5 p-3 cursor-pointer overflow-visible transition-shadow duration-300 ease-in-out hover:ring-1 hover:ring-green hover:ring-offset-2"
       >
-        <img
-          src={category.image}
-          alt={category.title}
-          className="w-full h-32 object-cover rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
-        />
-        <h3 className="mt-3 text-white font-semibold text-center">{category.title}</h3>
+        <div className="overflow-visible">
+          <img
+            src={category.image}
+            alt={category.title}
+            className="w-full object-cover rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
+          />
+        </div>
+        <h3 className="mt-4 text-white font-semibold text-lg text-center">{category.title}</h3>
       </a>
     ))}
   </div>
 </section>
+
 
     </main>
   );

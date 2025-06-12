@@ -118,55 +118,89 @@
     }
   ],
   "projects": [
-    {
-      "title": "Spotify Clone",
-      "image": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjY1OXwwfDF8c2VhY2h8M3x8c3BvdGlmeXxlbnwwfHx8fDE2NTg1NjQ0NzM&ixlib=rb-1.2.1&q=80&w=1080",
-      "tech": ["React", "Tailwind", "Zustand"],
-      "description": "Spotify-inspired music streaming UI using Zustand and TailwindCSS.",
-      "link": "https://your-live-demo.com"
+     {
+      "title": "Oral and Dental Care",
+      "description": "A simple website showcasing the dental services offered by the clinic",
+      "tech": ["Next.js", "TailwindCSS", "Hosting"],
+      "link": "https://www.oralanddentalcare.com.np/"
     },
     {
-      "title": "Blog CMS",
-      "image": "https://images.unsplash.com/photo-1620287341639-d141a3a15cfd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "tech": ["WordPress", "PHP", "Custom Theme"],
-      "description": "Content management system for blogging with a fully custom theme.",
-      "link": "https://your-live-demo.com"
-    },
-    {
-      "title": "Portfolio v2",
-      "image": "https://images.unsplash.com/photo-1569322977266-acff659212fd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "tech": ["Vite", "Tailwind"],
-      "description": "Revamped developer portfolio built using Vite and TailwindCSS.",
-      "link": "https://your-live-demo.com"
-    },
-    {
-      "title": "Kanban Task Manager",
-      "image": "https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjY1OXwwfDF8c2VhY2h8MXx8a2FubmFufGVufDB8fHx8fDE2NTg1NjQ0NzM&ixlib=rb-1.2.1&q=80&w=1080",
-      "tech": ["React", "Drag-and-Drop", "Zustand"],
-      "description": "Trello-style task board with drag & drop and local state management.",
-      "link": "https://your-live-demo.com"
-    }
-  ],
-  "personalProjects": [
-    {
-      "title": "AI Chatbot Portfolio Assistant",
-      "description": "An interactive chatbot that answers questions about my projects using AI and semantic search.",
-      "tech": ["Next.js", "OpenAI API", "Pinecone", "TailwindCSS"],
-      "link": "https://your-chatbot-project-link.com"
-    },
-    {
-      "title": "Code Snippet Manager",
+      "title": "Hotel Thrive",
       "description": "A personal tool for saving, tagging, and searching through reusable code snippets.",
-      "tech": ["React", "TypeScript", "Firebase", "TailwindCSS"],
-      "link": "https://your-code-snippet-manager-link.com"
+      "tech": ["HTML", "CSS", "Javascript"],
+      "link": "https://www.hotelthrive.com/"
     },
     {
-      "title": "Dev Blog Engine",
-      "description": "A markdown-based blogging platform where I write about JavaScript and React concepts.",
-      "tech": ["Next.js", "MDX", "TailwindCSS"],
-      "link": "https://your-blog-engine-link.com"
+      "title": "Interlace Studies",
+      "description": "A consultancy operating across Australia, the Philippines, Cambodia, and Nepal.",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "link": "https://interlace.com.au/"
+    },
+    {
+      "title": "Country Fresh Rockdale",
+      "description": "A responsive website for a grocery store in Rockdale, Australia",
+      "tech": ["React", "Vite", "Tailwind"],
+      "link": "https://countryfreshrockdale.com.au/"
     }
   ],
+"personalProjects": [
+  {
+    "title": "Weather App",
+    "description": "Built with ReactJS, it fetches and displays live weather data using the OpenWeatherAPI.",
+    "tech": ["ReactJS", "API"],
+    "link": "https://weather-app-react-lovat.vercel.app/",
+    "image": "assets/img/weather-app.png"
+  },
+  {
+    "title": "React Learning Site",
+    "description": "A simple website demonstrating core React concepts, deployed via Vercel.",
+    "tech": ["ReactJS", "Vercel"],
+    "link": "https://react-learning-site.vercel.app/",
+    "image": "assets/img/react-learning-site.png"
+  },
+  {
+    "title": "To-do Application",
+    "description": "A to-do app built with React and json-server for data storage and retrieval.",
+    "tech": ["ReactJS", "json-server"],
+    "link": "https://github.com/shubhaaaaaaa/react-todo",
+    "image": "assets/img/todo-app.png"
+  },
+  {
+    "title": "Authentication Form",
+    "description": "A signup/login system with secure form validation using Formik and Yup.",
+    "tech": ["ReactJS", "Formik", "Yup"],
+    "link": "https://react-form-by-shubha.vercel.app/",
+    "image": "assets/img/auth-form.png"
+  },
+  {
+    "title": "React Checklist App",
+    "description": "A checklist app designed to streamline team workflows by centralizing tasks for departments.",
+    "tech": ["ReactJS"],
+    "link": "https://master-checklist-iota.vercel.app/",
+    "image": "assets/img/checklist-app.png"
+  },
+  {
+    "title": "Hospital Dashboard",
+    "description": "A data dashboard for hospital management to monitor key metrics and operations.",
+    "tech": ["ReactJS", "TailwindCSS"],
+    "link": "https://hospital-dashboard-by-shubha.vercel.app/",
+    "image": "assets/img/hospital-dashboard.png"
+  },
+  {
+    "title": "Virtual Music App",
+    "description": "An interactive music app built with React, allowing users to play virtual instruments.",
+    "tech": ["ReactJS"],
+    "link": "https://virtual-music-app.vercel.app/",
+    "image": "assets/img/virtual-music-app.png"
+  },
+  {
+    "title": "Space Shooter Game",
+    "description": "A browser-based arcade game developed with JavaScript and deployed using Surge.",
+    "tech": ["JavaScript", "HTML", "CSS"],
+    "link": "https://space-shooter-by-shubha.surge.sh/",
+    "image": "assets/img/space-shooter.png"
+  }
+],
 "featured": {
   "title": "Dashboard App",
   "artist": "Built with React + RTK + TailwindCSS",
@@ -247,22 +281,22 @@
   "categories": [
     {
       "title": "Projects",
-      "image": "https://picsum.photos/300?22",
+      "image": "/assets/img/cover-projects.png",
       "link": "/projects"
     },
     {
       "title": "Blogs",
-      "image": "https://picsum.photos/300?23",
+"image": "/assets/img/cover-blogs.png",
       "link": "/blogs"
     },
     {
       "title": "Skills",
-      "image": "https://picsum.photos/300?24",
+"image": "/assets/img/cover-skills.png",
       "link": "/skills"
     },
     {
       "title": "Experience",
-      "image": "https://picsum.photos/300?25",
+"image": "/assets/img/cover-experience.png",
       "link": "/experience"
     }
   ]
