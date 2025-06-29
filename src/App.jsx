@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./index.css";
 
 import Sidebar from "./layouts/Sidebar";
@@ -14,29 +14,26 @@ import Experience from "./pages/Experience";
 
 function App() {
   return (
-    <Router>
-      <div className="flex h-screen">
-        {/* Sidebar with independent scroll */}
-        <Sidebar />
+    <div className="flex h-screen">
+      <Sidebar />
 
-        <div className="flex flex-col flex-1">
-          <Header />
+      <div className="flex flex-col flex-1">
+        <Header />
 
-          <main className="flex-1 bg-gray-900 text-white p-4 pb-32 overflow-y-auto">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/experience" element={<Experience />} />
-            </Routes>
-          </main>
+        <main className="flex-1 bg-gray-900 text-white p-4 pb-32 overflow-y-auto">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/experience" element={<Experience />} />
+          </Routes>
+        </main>
 
-          <Player />
-        </div>
+        <Player />
       </div>
-    </Router>
+    </div>
   );
 }
 

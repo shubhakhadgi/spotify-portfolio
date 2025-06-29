@@ -12,7 +12,8 @@ export default {
       },
       fontFamily: {
         gotham: ['Gotham', 'sans-serif'],
-      },
+      },      
+
     },
   },
   plugins: [],

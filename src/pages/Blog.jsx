@@ -1,41 +1,5 @@
-import React from 'react';
-
-const blogs = {
-  "Web Development": [
-    {
-      title: "Mastering React Hooks",
-      url: "https://dev.to/yourprofile/mastering-react-hooks",
-      date: "June 2025",
-    },
-    {
-      title: "Building Responsive UI",
-      url: "https://dev.to/yourprofile/building-responsive-ui",
-      date: "May 2025",
-    },
-    {
-      title: "Mastering React Hooks",
-      url: "https://dev.to/yourprofile/mastering-react-hooks",
-      date: "June 2025",
-    },
-    {
-      title: "Building Responsive UI",
-      url: "https://dev.to/yourprofile/building-responsive-ui",
-      date: "May 2025",
-    },
-  ],
-  "JavaScript": [
-    {
-      title: "Understanding Closures",
-      url: "https://dev.to/yourprofile/understanding-closures",
-      date: "April 2025",
-    },
-    {
-      title: "Async/Await Made Simple",
-      url: "https://dev.to/yourprofile/async-await-made-simple",
-      date: "March 2025",
-    },
-  ],
-};
+import data from '../data.json';
+const blogs = data.blogs;
 
 const Blog = () => {
   return (
@@ -49,20 +13,36 @@ const Blog = () => {
   {category}
 </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {posts.map(({ title, url, date }) => (
-              <a
-  key={title}
-  href={url}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-white/5 hover:bg-white/10 transition-all duration-300 ease-in-out rounded-xl p-5 block hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
->
-  <h3 className="text-lg font-semibold text-white hover:text-green transition-colors mb-2">
-    {title}
-  </h3>
-  <p className="text-white/60 text-sm">{date}</p>
-</a>
-            ))}
+{posts.map(({ title, url, date, img }) => (
+  <a
+    key={title}
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative bg-white/5 hover:bg-white/10 transition-all duration-300 ease-in-out rounded-xl overflow-hidden hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
+  >
+    {img && (
+<div className="relative">
+  <img
+    src={img}
+    alt={title}
+    className="w-full h-40 object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 pointer-events-none rounded-xl" />
+</div>
+
+    )}
+    <div className="p-5 relative z-10">
+      <h3 className="text-lg font-semibold text-white hover:text-green transition-colors mb-2">
+        {title}
+      </h3>
+      <p className="text-white/60 text-sm">{date}</p>
+    </div>
+  </a>
+))}
+
+
+
           </div>
         </section>
       ))}

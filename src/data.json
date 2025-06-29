@@ -1,27 +1,32 @@
 {
   "currentlyBuilding": {
-    "title": "Hospital Dashboard",
-    "description": "React + Redux + TypeScript + Cypress",
-    "img": "/path-to-thumbnail.jpg",
-    "progressPercent": 75
+    "title": "Blog Site",
+    "description": "React with Typescript",
+    "img": "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=800&q=80",
+    "progressPercent": 25
   },
-  "uiDiscography": [
-    {
-      "title": "Toast Notification",
-      "tech": "React · Tailwind · Hooks",
-      "img": "https://images.unsplash.com/photo-1525186402429-0c11fa2acb90?auto=format&fit=crop&w=200&q=80"
-    },
-    {
-      "title": "Spotify Clone",
-      "tech": "React · Tailwind · Firebase",
-      "img": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80"
-    },
-    {
-      "title": "Framer Motion Gallery",
-      "tech": "React · Framer Motion",
-      "img": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=200&q=80"
-    }
-  ],
+"industries": [
+  {
+    "title": "Beverage Industry",
+    "img": "assets/img/drink.png"
+  },
+  {
+    "title": "Food & Hospitality",
+    "img": "assets/img/food.png"
+  },
+  {
+    "title": "Dental & Healthcare Services",
+    "img": "assets/img/dental.png"
+  },
+  {
+    "title": "Hotels & Tourism",
+    "img": "assets/img/hotel.png"
+  },
+  {
+    "title": "Technology & Software",
+    "img": "assets/img/tech.png"
+  }
+],
   "tourDates": [
     "2021 — Wrote my first HTML tag.",
     "2022 — Deployed a full-stack React app.",
@@ -54,93 +59,126 @@
       "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80"
     }
   ],
-  "experience": [
+"experience": [
+  {
+    "title": "Frontend Lead (React)",
+    "org": "Tekgro Nepal Pvt. Ltd",
+    "time": "Feb 2024 – Present",
+    "url":"https://tekgro.com.au/",
+    "notes": [
+      "Writing clean, efficient code and optimizing performance for smooth user experiences.",
+      "Participating in sprint planning, debugging sessions, and deployment workflows using version control tools like Git."
+    ]
+  },
+  {
+    "title": "Frontend Developer Bootcamper",
+    "org": "Proshore Nepal Pvt. Ltd",
+    "time": "Nov 2023 – Feb 2024",
+    "url": "https://proshore.eu/",
+    "notes": [
+      "Got selected as a bootcamper in Proshore’s frontend development stream after three rounds of interviews.",
+      "Worked on a real-world project — building a task management application using React and TypeScript."
+    ]
+  },
+  {
+    "title": "Website Developer",
+    "org": "Freelancing",
+    "time": "June 2024 – Present",
+    "url": "https://np.linkedin.com/in/shubhakhadgi",
+    "notes": [
+      "Working on multiple web development projects as a Frontend Developer for a dental clinic and a consultancy.",
+      "Providing hosting solutions and UI/UX design services to meet client needs."
+    ]
+  },
+  {
+    "title": "Associate Developer",
+    "org": "Falsebug Technology",
+    "time": "Oct 2023 – June 2024",
+    "url": "https://np.linkedin.com/company/falsebug-technology",
+    "notes": [
+      "Crafted captivating websites using WordPress and Figma for clients like Bonum Cha, Vivid Interiors, and Akarshan Clinic.",
+      "Planned and conducted weekly meetings with individual clients to understand their requirements and gather feedback."
+    ]
+  },
+  {
+    "title": "Web Developer",
+    "org": "Longtail E-Media",
+    "time": "Sept 2022 – Oct 2023",
+    "url": "https://www.longtail.info/",
+    "notes": [
+      "Designed and built dynamic and responsive websites for hotels like Hotel Thrive, Mithila Yatri Niwas, and more using HTML, CSS, and JavaScript.",
+      "Developed visually appealing and user-centric designs to help clients attract and retain their customer base."
+    ]
+  }
+],
+ "education": [
     {
-      "title": "Frontend Intern",
-      "org": "Tech Corp",
-      "time": "Jan 2024 – Apr 2024",
-      "notes": [
-        "Fixed UI bugs across 3 modules",
-        "Implemented page transitions with Framer Motion"
-      ]
+      "degree": "Bachelor in Information Management (BIM)",
+      "school": "KIST College",
+      "year": "2019 – 2024",
+      "cgpa": "3.75",
+      "info": "Gained practical experience in software development, information systems, and project management. Completed capstone projects using React, Node.js, and MySQL."
     },
     {
-      "title": "Web Developer",
-      "org": "Freelance",
-      "time": "2023 – Present",
-      "notes": [
-        "Developed 10+ landing pages",
-        "Built dynamic CMS with React & WordPress"
-      ]
+      "degree": "Plus Two - Management",
+      "school": "Trinity International College",
+      "year": "2017 – 2019",
+      "cgpa": "3.6",
+      "info": "Built foundational knowledge in accounting, business studies, and economics while exploring early interests in computer applications."
     },
     {
-      "title": "Frontend Developer Trainee",
-      "org": "CodeBase Academy",
-      "time": "Jul 2023 – Dec 2023",
-      "notes": [
-        "Completed real-world projects in a team setting",
-        "Worked with Git workflows and component architecture"
-      ]
-    },
-    {
-      "title": "Open Source Contributor",
-      "org": "React Projects",
-      "time": "2024",
-      "notes": [
-        "Contributed to UI libraries and issue resolutions",
-        "Refactored components using Hooks and Context API"
-      ]
+      "degree": "SLC",
+      "school": "Galaxy Public School",
+      "year": "2003 – 2016",
+      "cgpa": "3.75",
+      "info": "Received awards for academic excellence and participated in extracurricular activities including IT clubs and inter-school competitions."
     }
   ],
-  "education": [
-    {
-      "degree": "BSc in Computer Science",
-      "school": "ABC University",
-      "year": "2023",
-      "info": "Specialized in frontend engineering and UI design"
-    }
-  ],
-  "courses": [
-    {
-      "name": "React Front to Back",
-      "platform": "Udemy",
-      "year": "2023"
-    },
-    {
-      "name": "Tailwind Mastery",
-      "platform": "Scrimba",
-      "year": "2024"
-    },
-    {
-      "name": "Frontend Career Path",
-      "platform": "Frontend Masters",
-      "year": "2024"
-    }
-  ],
+"courses": [
+  {
+    "name": "React Basics",
+    "platform": "Meta (Coursera)",
+    "year": "2024",
+    "grade": "98.21%",
+    "certificate": "https://www.coursera.org/account/accomplishments/verify/ZDZVRCFEJ9S4"
+  },
+  {
+    "name": "Introduction to Front-End Development",
+    "platform": "Meta (Coursera)",
+    "year": "2024",
+    "grade": "98%",
+    "certificate": "https://www.coursera.org/account/accomplishments/verify/HGTDUEPRBGWM"
+  }
+],
+
   "projects": [
      {
       "title": "Oral and Dental Care",
       "description": "A simple website showcasing the dental services offered by the clinic",
       "tech": ["Next.js", "TailwindCSS", "Hosting"],
-      "link": "https://www.oralanddentalcare.com.np/"
+      "link": "https://www.oralanddentalcare.com.np/",
+       "image": "assets/img/oralanddental.png"
     },
     {
       "title": "Hotel Thrive",
       "description": "A personal tool for saving, tagging, and searching through reusable code snippets.",
       "tech": ["HTML", "CSS", "Javascript"],
-      "link": "https://www.hotelthrive.com/"
+      "link": "https://www.hotelthrive.com/",
+       "image": "assets/img/hotelthrive.png"
     },
     {
       "title": "Interlace Studies",
       "description": "A consultancy operating across Australia, the Philippines, Cambodia, and Nepal.",
       "tech": ["HTML", "CSS", "JavaScript"],
-      "link": "https://interlace.com.au/"
+      "link": "https://interlace.com.au/",
+       "image": "assets/img/interlace.png"
     },
     {
       "title": "Country Fresh Rockdale",
       "description": "A responsive website for a grocery store in Rockdale, Australia",
       "tech": ["React", "Vite", "Tailwind"],
-      "link": "https://countryfreshrockdale.com.au/"
+      "link": "https://countryfreshrockdale.com.au/",
+       "image": "assets/img/countryfresh.png"
     }
   ],
 "personalProjects": [
@@ -202,34 +240,34 @@
   }
 ],
 "featured": {
-  "title": "Dashboard App",
+  "title": "Personal Portfolio",
   "artist": "Built with React + RTK + TailwindCSS",
   "description": "A comprehensive medical dashboard to manage appointments, analytics, and patient information in real-time.",
-  "image": "https://picsum.photos/1600/400?17",
-  "link": "https://hospital-dashboard-by-shubha.vercel.app/",
-  "tech": ["React", "Redux Toolkit", "TailwindCSS"]
+  "image": "assets/img/personal-portfolio.png",
+  "link": "https://shubhakhadgi.com.np/",
+  "tech": ["HTML", "CSS", "JavaScript"]
 },
 
-  "blogPosts": [
-    {
-      "title": "Mastering React Hooks as a beginner - useCallback()",
-      "subtitle": "React Essentials",
-      "image": "https://picsum.photos/400?5",
-      "link": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usecallback-52oe"
-    },
-    {
-      "title": "useRef Hook: The Silent Helper",
-      "subtitle": "React Essentials",
-      "image": "https://picsum.photos/400?6",
-      "link": "https://dev.to/shubha_k/useref-hook-the-silent-helper-2dpf"
-    },
-    {
-      "title": "React Interview Prep Guide 1: Core Concepts Made Easy",
-      "subtitle": "React Essentials",
-      "image": "https://picsum.photos/400?7",
-      "link": "https://dev.to/shubha_k/jsx-and-babel-react-interview-essentials-3e42"
-    }
-  ],
+"blogPosts": [
+  {
+    "title": "Mastering React Hooks as a beginner - useCallback()",
+    "subtitle": "React Essentials",
+    "image": "assets/img/blog1.png",
+    "link": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usecallback-52oe"
+  },
+  {
+    "title": "useRef Hook: The Silent Helper",
+    "subtitle": "React Essentials",
+    "image": "assets/img/blog3.png",
+    "link": "https://dev.to/shubha_k/useref-hook-the-silent-helper-2dpf"
+  },
+  {
+    "title": "React Interview Prep Guide 1: Core Concepts Made Easy",
+    "subtitle": "React Essentials",
+    "image": "assets/img/blog2.png",
+    "link": "https://dev.to/shubha_k/jsx-and-babel-react-interview-essentials-3e42"
+  }
+],
 "skills": [
   {
     "title": "React",
@@ -299,5 +337,123 @@
 "image": "/assets/img/cover-experience.png",
       "link": "/experience"
     }
-  ]
+  ],
+"testimonials": [
+  {
+    "name": "Sarad Shrestha",
+    "feedback": "Working with her was a truly enriching experience. Her mentorship was encouraging, and her collaborative spirit made every project smoother and more enjoyable.",
+    "img": "/assets/img/sarad.jpeg"
+  },
+  {
+    "name": "Pradip Pandey",
+    "feedback": "Shubha brings a thoughtful and collaborative approach to every project. Her code is clean, her ideas are practical, and her dedication is unmatched.",
+    "img": "/assets/img/pradip.jpg"
+  },
+  {
+    "name": "Aniraj Shahi",
+    "feedback": "Highly professional, handworker and talented full stack developer. I have always found her to be very strategic and engaged.",
+    "img": "/assets/img/aniraj.jpg"
+  }
+]   
+,
+  "nations": [
+  {
+    "name": "India",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "name": "Nepal",
+    "flag": "https://flagcdn.com/np.svg"
+  },
+  {
+    "name": "Australia",
+    "flag": "https://flagcdn.com/au.svg"
+  }
+],
+
+ "blogs": {
+    "Interview Prep": [
+      {
+        "img": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+        "title": "React Interview Prep Guide 1: Core Concepts Made Easy",
+        "url": "https://dev.to/shubha_k/jsx-and-babel-react-interview-essentials-3e42",
+        "date": "April 22, 2025"
+      }
+    ],
+    "React": [
+      {
+        "img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+        "title": "Mastering React Hooks as a beginner - useCallback()",
+        "url": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usecallback-52oe",
+        "date": "April 18, 2025"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+        "title": "useRef Hook: The Silent Helper",
+        "url": "https://dev.to/shubha_k/useref-hook-the-silent-helper-2dpf",
+        "date": "April 10, 2025"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&q=80",
+        "title": "The Power of React: Why It’s More Than Just Components",
+        "url": "https://dev.to/shubha_k/the-power-of-react-why-its-more-than-just-components-3fa1",
+        "date": "April 9, 2025"
+      },
+{
+  "img": "https://images.unsplash.com/photo-1669023414166-a4cc7c0fe1f5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "title": "What is JSX and Why Do We Use It in React?",
+  "url": "https://dev.to/shubha_k/what-is-jsx-and-why-do-we-use-it-in-react-3f4o",
+  "date": "April 9, 2025"
+}
+,
+      {
+        "img": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+        "title": "Mastering React Hooks as a beginner - useMemo()",
+        "url": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usememo-12j9",
+        "date": "April 8, 2025"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+        "title": "Mastering React Hooks as a beginner - useState()",
+        "url": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usestate-41p4",
+        "date": "April 8, 2025"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80",
+        "title": "Mastering React Hooks as a beginner - useEffect()",
+        "url": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-25eg",
+        "date": "April 8, 2025"
+      }
+    ],
+    "JavaScript": [
+      {
+        "img": "https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80",
+        "title": "What Is Hoisting in JavaScript?",
+        "url": "https://dev.to/shubha_k/what-is-hoisting-in-javascript-5g8a",
+        "date": "June 3, 2025"
+      }
+    ]
+  },
+"songs": [
+  {
+    "title": "Deep Focus Chill Beats",
+    "artist": "LoFi Collective",
+    "albumArt": "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/39631/optimized_product_thumb_stage.jpg",
+    "src": "/assets/audio/tune1.mp3"
+  },
+  {
+    "title": "Easy Days",
+    "artist": "Kainbeats",
+    "albumArt": "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/39640/optimized_product_thumb_stage.jpg",
+    "src": "/assets/audio/tune2.mp3"
+  },
+  {
+    "title": "Better Days",
+    "artist": "LAKEY INSPIRED",
+    "albumArt": "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/87868/optimized_product_thumb_album-cover-maker-for-alternative-music-featuring-a-trendy-style-3274__1_.jpg",
+    "src": "/assets/audio/tune3.mp3"
+  }
+]
+
+
 }

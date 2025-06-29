@@ -20,7 +20,7 @@ export default function SkillsPage() {
         <h2 className="text-2xl font-semibold mb-4">Core Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {skills.map((skill, idx) => (
-<div key={idx} className="bg-white/5 hover:bg-white/10 transition-all duration-300 ease-in-out rounded-xl p-4 hover:shadow-spotify ">
+<div key={idx} className="bg-white/5 rounded-xl p-4 hover:shadow-spotify ">
   <div className="flex justify-between items-center mb-2">
     <div className="flex items-center gap-2">
       <h3 className="text-white font-semibold">{skill.title}</h3>
@@ -74,15 +74,15 @@ export default function SkillsPage() {
     <h2 className="text-2xl font-semibold">Featured Work</h2>
   </div>
   
-  <div className="flex overflow-x-auto gap-4 pb-2">
-    <div className="min-w-[300px] bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition shadow-lg">
+  <div className="flex  gap-4 pb-2 ">
+    <div className=" bg-white/5 rounded-xl  shadow-lg hover:ring-1 hover:ring-green transform  duration-300 ease-in-out transition">
       <img
         src={featured.image}
         alt={featured.title}
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover rounded-xl"
       />
       <div className="p-4">
-        <h3 className="font-semibold text-white text-lg mb-1">{featured.title}</h3>
+        <h3 className="font-semibold text-white text-lg mb-1 hover:text-green ">{featured.title}</h3>
         <p className="text-white/70 text-sm mb-2">{featured.artist}</p>
         <p className="text-white/60 text-sm mb-4">{featured.description}</p>
 
@@ -103,7 +103,7 @@ export default function SkillsPage() {
           href={featured.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block text-sm font-medium transition"
+          className="inline-block text-sm font-medium transition hover:text-green "
         >
           View Project →
         </a>

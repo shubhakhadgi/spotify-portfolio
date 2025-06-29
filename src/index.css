@@ -33,3 +33,42 @@
     font-style: normal;
     font-display: swap;
   }
+/* Spotify-style scrollbar */
+.scrollbar-spotify::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scrollbar-spotify::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-spotify::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.group:hover .scrollbar-spotify::-webkit-scrollbar-thumb {
+  background-color: #1DB954;
+}
+
+/* Hide arrows (Chrome/Safari) */
+.scrollbar-no-arrows::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Firefox styling */
+.scrollbar-spotify {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+.group:hover .scrollbar-spotify {
+  scrollbar-color: #1DB954 transparent;
+}
+
+/* Optional: hide scrollbar until hover */
+.scrollbar-spotify::-webkit-scrollbar {
+  background: transparent;
+}

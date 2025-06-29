@@ -1,4 +1,4 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   Home,
   User,
@@ -7,11 +7,10 @@ import {
   Briefcase,
   BarChart3
 } from "lucide-react";
-import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <aside className="w-64 h-screen bg-black text-white flex flex-col p-4 overflow-y-auto">
+    <aside className="w-64 h-screen bg-black text-white flex flex-col p-4 overflow-y-auto sticky">
       <div>
         <div className="mb-6 px-2 flex items-center">
           <img src="/logo.png" alt="Spotify" className="w-12" />
@@ -21,49 +20,71 @@ const Sidebar = () => {
         </div>
 
         <nav className="space-y-4">
-          <Link
+          <NavLink
             to="/"
-            className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-2 py-2 rounded cursor-pointer
+              ${isActive ? "bg-zinc-800 text-green" : "hover:bg-zinc-800"}`
+            }
           >
             <Home className="w-5 h-5" />
             <span>Home</span>
-          </Link>
-          <Link
+          </NavLink>
+
+          <NavLink
             to="/about"
-            className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-2 py-2 rounded cursor-pointer
+              ${isActive ? "bg-zinc-800 text-green" : "hover:bg-zinc-800"}`
+            }
           >
             <User className="w-5 h-5" />
             <span>About</span>
-          </Link>
-          <Link
+          </NavLink>
+
+          <NavLink
             to="/projects"
-            className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-2 py-2 rounded cursor-pointer
+              ${isActive ? "bg-zinc-800 text-green" : "hover:bg-zinc-800"}`
+            }
           >
             <Layers className="w-5 h-5" />
             <span>Projects</span>
-          </Link>
-          <Link
+          </NavLink>
+
+          <NavLink
             to="/skills"
-            className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-2 py-2 rounded cursor-pointer
+              ${isActive ? "bg-zinc-800 text-green" : "hover:bg-zinc-800"}`
+            }
           >
             <BarChart3 className="w-5 h-5" />
-
             <span>Skills</span>
-          </Link>
-          <Link
+          </NavLink>
+
+          <NavLink
             to="/blog"
-            className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-2 py-2 rounded cursor-pointer
+              ${isActive ? "bg-zinc-800 text-green" : "hover:bg-zinc-800"}`
+            }
           >
             <PenSquare className="w-5 h-5" />
             <span>Blog</span>
-          </Link>
-          <Link
+          </NavLink>
+
+          <NavLink
             to="/experience"
-            className="flex items-center gap-3 px-2 py-2 hover:bg-zinc-800 rounded cursor-pointer"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-2 py-2 rounded cursor-pointer
+              ${isActive ? "bg-zinc-800 text-green" : "hover:bg-zinc-800"}`
+            }
           >
             <Briefcase className="w-5 h-5" />
             <span>Experience</span>
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </aside>
