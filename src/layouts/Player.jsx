@@ -13,46 +13,28 @@ import {
   Volume2,
   VolumeX,
   Maximize2,
-  CheckCircle2,
 } from "lucide-react";
 
-const IconButton = ({ label, children, onClick, active = false }) => {
-  const [hover, setHover] = useState(false);
-  return (
-    <button
-      onClick={onClick}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      className="relative flex items-center justify-center cursor-pointer"
-      aria-label={label}
-      type="button"
-    >
-      {children}
-
-      {/* Tooltip */}
-      {hover && (
-        <span className="absolute bottom-full mb-2 px-2 py-1 text-xs rounded bg-black bg-opacity-80 text-white whitespace-nowrap select-none z-50">
-          {label}
-        </span>
-      )}
-    </button>
-  );
-};
+const IconButton = ({ label, children, onClick }) => (
+  <button
+    onClick={onClick}
+    className="relative flex items-center justify-center cursor-pointer"
+    aria-label={label}
+    type="button"
+  >
+    {children}
+  </button>
+);
 
 const Player = () => {
-  // Songs from JSON
   const songs = data.songs || [];
-
-  // Playback states
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [shuffle, setShuffle] = useState(true);
   const [repeat, setRepeat] = useState(false);
-  const [progress, setProgress] = useState(0); // seconds
+  const [progress, setProgress] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
-
-  // Your existing UI states
-  const [liked, setLiked] = useState(false);
+  const [likedMap, setLikedMap] = useState({});
   const [muted, setMuted] = useState(false);
   const [volume, setVolume] = useState(60);
   const [micOn, setMicOn] = useState(false);
@@ -64,7 +46,7 @@ const Player = () => {
   const audioRef = useRef(null);
   const currentSong = songs[currentIndex] || {};
 
-  // Sync play/pause with audio element
+  // Play/pause effect
   useEffect(() => {
     if (!audioRef.current) return;
     if (isPlaying) {
@@ -74,14 +56,41 @@ const Player = () => {
     }
   }, [isPlaying, currentSong]);
 
-  // Update progress from audio time update
+  // Scroll listener to minimize player
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+
+          if (currentScrollY > lastScrollY + 10 && !fullscreen) {
+            setFullscreen(true); // minimize
+          } else if (currentScrollY < lastScrollY - 10 && fullscreen) {
+            setFullscreen(false); // expand
+          }
+
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [fullscreen]);
+
+  // Other audio functions
   const handleTimeUpdate = () => {
     if (!isDragging && audioRef.current) {
       setProgress(audioRef.current.currentTime);
     }
   };
 
-  // Handle progress bar dragging and clicking
   const updateProgress = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
@@ -102,21 +111,15 @@ const Player = () => {
     if (!isDragging) return;
     updateProgress(e);
   };
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  const handleMouseUp = () => setIsDragging(false);
 
-  // Format seconds to mm:ss
   const formatTime = (secs) => {
     if (!secs) return "0:00";
     const minutes = Math.floor(secs / 60);
-    const seconds = Math.floor(secs % 60)
-      .toString()
-      .padStart(2, "0");
+    const seconds = Math.floor(secs % 60).toString().padStart(2, "0");
     return `${minutes}:${seconds}`;
   };
 
-  // Skip to next track (shuffle/repeat logic)
   const handleNext = () => {
     if (shuffle) {
       if (songs.length <= 1) return;
@@ -127,9 +130,7 @@ const Player = () => {
       setCurrentIndex(next);
     } else {
       if (currentIndex === songs.length - 1) {
-        if (repeat) {
-          setCurrentIndex(0);
-        }
+        if (repeat) setCurrentIndex(0);
       } else {
         setCurrentIndex(currentIndex + 1);
       }
@@ -137,7 +138,6 @@ const Player = () => {
     setProgress(0);
   };
 
-  // Skip to previous track
   const handlePrev = () => {
     if (shuffle) {
       if (songs.length <= 1) return;
@@ -148,9 +148,7 @@ const Player = () => {
       setCurrentIndex(prev);
     } else {
       if (currentIndex === 0) {
-        if (repeat) {
-          setCurrentIndex(songs.length - 1);
-        }
+        if (repeat) setCurrentIndex(songs.length - 1);
       } else {
         setCurrentIndex(currentIndex - 1);
       }
@@ -158,7 +156,6 @@ const Player = () => {
     setProgress(0);
   };
 
-  // When track ends
   const handleEnded = () => {
     if (repeat) {
       audioRef.current.currentTime = 0;
@@ -168,7 +165,6 @@ const Player = () => {
     }
   };
 
-  // Volume bar click handler
   const handleVolumeClick = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
@@ -184,7 +180,6 @@ const Player = () => {
     }
   };
 
-  // Sync muted & volume with audio element
   useEffect(() => {
     if (!audioRef.current) return;
     audioRef.current.muted = muted;
@@ -195,9 +190,19 @@ const Player = () => {
     audioRef.current.volume = volume / 100;
   }, [volume]);
 
+  const toggleLike = () => {
+    setLikedMap((prev) => ({
+      ...prev,
+      [currentIndex]: !prev[currentIndex],
+    }));
+  };
+
   return (
-    <section className="fixed bottom-0 left-0 w-full bg-black text-white h-[90px] flex items-center justify-between px-4 text-sm select-none">
-      {/* Audio element */}
+    <section
+      className={`fixed bottom-0 left-0 w-full bg-black text-white z-50 px-3 sm:px-6
+      transition-all duration-300 ease-in-out
+      ${fullscreen ? "h-14 opacity-90 overflow-hidden py-1" : "py-2 sm:py-3 opacity-100 h-auto"}`}
+    >
       <audio
         ref={audioRef}
         src={currentSong.src}
@@ -205,109 +210,211 @@ const Player = () => {
         onEnded={handleEnded}
       />
 
-      {/* Left: Song info + like */}
-      <div className="flex items-center w-[30%] min-w-[240px] gap-3">
-        <img
-          src={currentSong.albumArt}
-          alt={`${currentSong.title} album art`}
-          className="w-14 h-14 rounded"
-        />
-        <div className="flex flex-col justify-center truncate">
-          <span className="text-sm font-semibold truncate">{currentSong.title}</span>
-          <span className="text-xs text-neutral-400 truncate">{currentSong.artist}</span>
+      {/* Full UI (hidden when fullscreen) */}
+      <div
+        className={`${
+          fullscreen ? "hidden" : "flex flex-col sm:flex-row justify-between items-center gap-y-4"
+        }`}
+      >
+        {/* Left: Song Info */}
+        <div className="flex items-center md:justify-start justify-between gap-12 w-full sm:w-1/3 min-w-0">
+          <div className="flex gap-4 ">
+            <img
+              src={currentSong.albumArt}
+              alt="Album Art"
+              className="w-12 h-12 rounded object-cover"
+            />
+            <div className="flex flex-col truncate min-w-0">
+              <span className="text-sm font-semibold truncate">{currentSong.title}</span>
+              <span className="text-xs text-neutral-400 truncate">{currentSong.artist}</span>
+            </div>
+          </div>
+          <IconButton
+            label={likedMap[currentIndex] ? "Unlike" : "Like"}
+            onClick={toggleLike}
+          >
+            <Heart
+              className={`w-5 h-5 ${
+                likedMap[currentIndex]
+                  ? "text-[#1DB954]"
+                  : "text-white opacity-80 hover:opacity-100"
+              }`}
+              fill={likedMap[currentIndex] ? "#1DB954" : "none"}
+            />
+          </IconButton>
         </div>
-        <CheckCircle2 className="text-[#1DB954] w-4 h-4 ml-2" />
 
-        {/* Like Button */}
-        <IconButton
-          label={liked ? "Unlike" : "Like"}
-          onClick={() => setLiked(!liked)}
-          active={liked}
-        >
-          <Heart
-            className={`w-5 h-5 transition-colors duration-200 ${
-              liked ? "text-[#1DB954]" : "text-white opacity-80 hover:opacity-100"
-            }`}
-            fill={liked ? "#1DB954" : "none"}
-          />
-        </IconButton>
+        {/* Center: Controls */}
+        <div className="flex flex-col items-center gap-2 w-full sm:w-1/3 max-w-[520px]">
+          <div className="flex items-center gap-x-5">
+            <IconButton label="Shuffle" onClick={() => setShuffle(!shuffle)}>
+              <Shuffle
+                className={`w-5 h-5 ${
+                  shuffle ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"
+                }`}
+              />
+            </IconButton>
+            <IconButton label="Previous" onClick={handlePrev}>
+              <SkipBack className="w-5 h-5 opacity-80 hover:opacity-100" />
+            </IconButton>
+            <IconButton
+              label={isPlaying ? "Pause" : "Play"}
+              onClick={() => setIsPlaying(!isPlaying)}
+            >
+              <div className="bg-white text-black rounded-full p-2 w-10 h-10 flex items-center justify-center">
+                {isPlaying ? (
+                  <PauseIcon className="w-5 h-5" />
+                ) : (
+                  <PlayIcon className="w-5 h-5" />
+                )}
+              </div>
+            </IconButton>
+            <IconButton label="Next" onClick={handleNext}>
+              <SkipForward className="w-5 h-5 opacity-80 hover:opacity-100" />
+            </IconButton>
+            <IconButton label="Repeat" onClick={() => setRepeat(!repeat)}>
+              <Repeat
+                className={`w-5 h-5 ${
+                  repeat ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"
+                }`}
+              />
+            </IconButton>
+          </div>
+
+          <div className="flex items-center gap-2 text-xs text-neutral-400 w-full">
+            <span className="w-8 text-right">{formatTime(progress)}</span>
+            <div
+              className="flex-1 bg-neutral-600 rounded-full h-[4px] relative cursor-pointer"
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+            >
+              <div
+                className="bg-white h-full absolute top-0 left-0"
+                style={{
+                  width: audioRef.current
+                    ? `${(progress / audioRef.current.duration) * 100}%`
+                    : "0%",
+                }}
+              />
+            </div>
+            <span className="w-8">{formatTime(audioRef.current?.duration)}</span>
+          </div>
+        </div>
+
+        {/* Right: Extra Controls */}
+        <div className="flex items-center gap-x-8 md:gap-x-4 justify-center md:justify-end w-full sm:w-1/3 overflow-x-auto scrollbar-hide">
+          <IconButton label="Mic" onClick={() => setMicOn(!micOn)}>
+            <Mic2
+              className={`w-5 h-5 ${micOn ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"}`}
+            />
+          </IconButton>
+          <IconButton label="Device" onClick={() => setDeviceConnected(!deviceConnected)}>
+            <Laptop2
+              className={`w-5 h-5 ${
+                deviceConnected ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"
+              }`}
+            />
+          </IconButton>
+          <IconButton label="Lyrics" onClick={() => setLyricsOn(!lyricsOn)}>
+            <ListMusic
+              className={`w-5 h-5 ${lyricsOn ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"}`}
+            />
+          </IconButton>
+          <IconButton
+            label={muted || volume === 0 ? "Unmute" : "Mute"}
+            onClick={() => setMuted(!muted)}
+          >
+            {muted || volume === 0 ? (
+              <VolumeX className="w-5 h-5" />
+            ) : (
+              <Volume2 className="w-5 h-5" />
+            )}
+          </IconButton>
+          <div
+            className="hidden sm:block w-[80px] h-[4px] bg-neutral-600 rounded-full relative cursor-pointer"
+            onClick={handleVolumeClick}
+            onMouseEnter={() => setVolHover(true)}
+            onMouseLeave={() => setVolHover(false)}
+          >
+            <div
+              className="absolute top-0 left-0 h-full rounded-full"
+              style={{
+                width: muted ? "0%" : `${volume}%`,
+                backgroundColor: volHover ? "#1DB954" : "white",
+              }}
+            />
+            {volHover && (
+              <div
+                className="absolute top-1/2 bg-white rounded-full w-4 h-4 -translate-y-1/2"
+                style={{
+                  left: muted ? "0%" : `${volume}%`,
+                  transform: "translate(-50%, -50%)",
+                }}
+              />
+            )}
+          </div>
+          <IconButton
+            label={fullscreen ? "Exit Fullscreen" : "Fullscreen"}
+            onClick={() => setFullscreen(!fullscreen)}
+          >
+            <Maximize2
+              className={`w-5 h-5 ${fullscreen ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"}`}
+            />
+          </IconButton>
+        </div>
       </div>
 
-      {/* Center: Controls + Progress */}
-      <div className="flex flex-col items-center w-[40%] max-w-[520px]">
-        <div className="flex items-center gap-5 mb-2">
-          {/* Shuffle */}
-          <IconButton
-            label="Shuffle"
-            onClick={() => setShuffle(!shuffle)}
-            active={shuffle}
-          >
-            <Shuffle
-              className={`w-5 h-5 transition-colors duration-150 ${
-                shuffle ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"
-              }`}
-            />
-            {shuffle && (
-              <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[#1DB954] rounded-full" />
-            )}
-          </IconButton>
+      {/* Minimal bar when fullscreen */}
+      {fullscreen && (
+        <div className="flex items-center justify-between h-14 px-3 sm:px-6 gap-4">
+          {/* Album art */}
+          <img
+            src={currentSong.albumArt}
+            alt="Album Art"
+            className="w-10 h-10 rounded object-cover flex-shrink-0"
+          />
 
-          {/* Previous */}
-          <IconButton label="Previous" onClick={handlePrev}>
-            <SkipBack className="w-5 h-5 opacity-80 hover:opacity-100" />
-          </IconButton>
+          {/* Song title & artist */}
+          <div className="flex flex-col truncate flex-grow min-w-0">
+            <span className="text-sm font-semibold truncate">{currentSong.title}</span>
+            <span className="text-xs text-neutral-400 truncate">{currentSong.artist}</span>
+          </div>
 
-          {/* Play/Pause */}
-          <IconButton
-            label={isPlaying ? "Pause" : "Play"}
-            onClick={() => setIsPlaying(!isPlaying)}
-          >
-            <button
-              className="bg-white rounded-full p-2 w-8 h-8 flex items-center justify-center pointer-events-none"
-              aria-hidden="true"
+          {/* Playback controls: prev, play/pause, next */}
+          <div className="hidden sm:flex items-center gap-4 flex-shrink-0">
+            <IconButton label="Previous" onClick={handlePrev}>
+              <SkipBack className="w-5 h-5 opacity-80 hover:opacity-100" />
+            </IconButton>
+            <IconButton
+              label={isPlaying ? "Pause" : "Play"}
+              onClick={() => setIsPlaying(!isPlaying)}
             >
-              {isPlaying ? (
-                <PauseIcon className="text-black w-5 h-5" />
-              ) : (
-                <PlayIcon className="text-black w-5 h-5" />
-              )}
-            </button>
-          </IconButton>
+              <div className="bg-white text-black rounded-full p-1 w-8 h-8 flex items-center justify-center">
+                {isPlaying ? (
+                  <PauseIcon className="w-4 h-4" />
+                ) : (
+                  <PlayIcon className="w-4 h-4" />
+                )}
+              </div>
+            </IconButton>
+            <IconButton label="Next" onClick={handleNext}>
+              <SkipForward className="w-5 h-5 opacity-80 hover:opacity-100" />
+            </IconButton>
+          </div>
 
-          {/* Next */}
-          <IconButton label="Next" onClick={handleNext}>
-            <SkipForward className="w-5 h-5 opacity-80 hover:opacity-100" />
-          </IconButton>
-
-          {/* Repeat */}
-          <IconButton
-            label="Repeat"
-            onClick={() => setRepeat(!repeat)}
-            active={repeat}
-          >
-            <Repeat
-              className={`w-5 h-5 transition-colors duration-150 ${
-                repeat ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"
-              }`}
-            />
-            {repeat && (
-              <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[#1DB954] rounded-full" />
-            )}
-          </IconButton>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="flex items-center w-full gap-2 text-xs text-neutral-400">
-          <span>{formatTime(progress)}</span>
+          {/* Progress bar */}
           <div
-            className="flex-1 bg-neutral-600 rounded-full h-[4px] overflow-hidden relative cursor-pointer"
+            className="hidden sm:block flex-shrink-0 w-40 h-1 bg-neutral-600 rounded-full cursor-pointer mx-4"
+            onClick={updateProgress}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
           >
             <div
-              className="bg-white h-full absolute top-0 left-0"
+              className="bg-white h-full rounded-full"
               style={{
                 width: audioRef.current
                   ? `${(progress / audioRef.current.duration) * 100}%`
@@ -315,85 +422,38 @@ const Player = () => {
               }}
             />
           </div>
-          <span>{formatTime(audioRef.current?.duration)}</span>
-        </div>
-      </div>
 
-      {/* Right controls */}
-      <div className="flex items-center w-[30%] justify-end gap-4 min-w-[240px] text-white">
-        <IconButton label="Mic" onClick={() => setMicOn(!micOn)} active={micOn}>
-          <Mic2 className={`w-5 h-5 ${micOn ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"}`} />
-        </IconButton>
-
-        <IconButton
-          label="Connect to a device"
-          onClick={() => setDeviceConnected(!deviceConnected)}
-          active={deviceConnected}
-        >
-          <Laptop2
-            className={`w-5 h-5 transition-opacity ${
-              deviceConnected
-                ? "text-[#1DB954] opacity-100"
-                : "text-white opacity-80 hover:opacity-100"
-            }`}
-          />
-        </IconButton>
-
-        <IconButton
-          label="Lyrics"
-          onClick={() => setLyricsOn(!lyricsOn)}
-          active={lyricsOn}
-        >
-          <ListMusic className={`w-5 h-5 ${lyricsOn ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"}`} />
-        </IconButton>
-
-        <IconButton
-          label={muted || volume === 0 ? "Unmute" : "Mute"}
-          onClick={() => setMuted(!muted)}
-        >
-          {muted || volume === 0 ? (
-            <VolumeX className="w-5 h-5" />
-          ) : (
-            <Volume2 className="w-5 h-5" />
-          )}
-        </IconButton>
-
-        {/* Volume Bar */}
-        <div
-          className="w-[80px] h-[4px] bg-neutral-600 rounded-full overflow-visible cursor-pointer relative"
-          onClick={handleVolumeClick}
-          onMouseEnter={() => setVolHover(true)}
-          onMouseLeave={() => setVolHover(false)}
-        >
-          {/* Volume fill track */}
-          <div
-            className={`h-full absolute top-0 left-0 rounded-full transition-colors duration-200`}
-            style={{
-              width: muted ? "0%" : `${volume}%`,
-              backgroundColor: volHover ? "#1DB954" : "white",
-            }}
-          />
-
-          {/* Volume knob - only show on hover */}
-          {volHover && (
-            <div
-              className="absolute top-1/2 bg-white rounded-full w-4 h-4 -translate-y-1/2"
-              style={{
-                left: muted ? "0%" : `${volume}%`,
-                transform: "translate(-50%, -50%)",
-              }}
+          {/* Like button */}
+          <IconButton
+            label={likedMap[currentIndex] ? "Unlike" : "Like"}
+            onClick={toggleLike}
+          >
+            <Heart
+              className={`w-5 h-5 ${
+                likedMap[currentIndex]
+                  ? "text-[#1DB954]"
+                  : "text-white opacity-80 hover:opacity-100"
+              }`}
+              fill={likedMap[currentIndex] ? "#1DB954" : "none"}
             />
-          )}
-        </div>
+          </IconButton>
 
-        <IconButton
-          label="Fullscreen"
-          onClick={() => setFullscreen(!fullscreen)}
-          active={fullscreen}
-        >
-          <Maximize2 className={`w-5 h-5 ${fullscreen ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"}`} />
-        </IconButton>
-      </div>
+          {/* Fullscreen toggle */}
+          <IconButton label="Exit Fullscreen" onClick={() => setFullscreen(false)}>
+            <Maximize2 className="w-5 h-5 text-[#1DB954]" />
+          </IconButton>
+        </div>
+      )}
+
+      <style>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 };

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
 
@@ -13,14 +14,16 @@ import Blog from "./pages/Blog";
 import Experience from "./pages/Experience";
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
-    <div className="flex h-screen">
-      <Sidebar />
+    <div className="flex h-screen overflow-hidden bg-gray-900 text-white">
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
       <div className="flex flex-col flex-1">
-        <Header />
+        <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
 
-        <main className="flex-1 bg-gray-900 text-white p-4 pb-32 overflow-y-auto">
+        <main className="flex-1 p-4 pb-32 overflow-y-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
