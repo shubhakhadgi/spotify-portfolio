@@ -17,13 +17,13 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen overflow-hidden bg-gray-900 text-white">
+    <div className="flex min-h-screen w-full bg-gray-900 text-white overflow-x-hidden">
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 w-full max-w-full">
         <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
 
-        <main className="flex-1 p-4 pb-32 overflow-y-auto">
+        <main className="flex-1 w-full max-w-full px-4 pb-32 overflow-y-auto overflow-x-hidden">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -39,5 +39,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

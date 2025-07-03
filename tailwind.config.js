@@ -12,7 +12,11 @@ export default {
       },
       fontFamily: {
         gotham: ['Gotham', 'sans-serif'],
-      },      
+      },  
+          maxWidth: {
+      screen: '100vw',
+    },
+    
 
     },
   },

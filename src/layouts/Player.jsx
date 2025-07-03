@@ -200,7 +200,7 @@ const Player = () => {
   return (
     <section
       className={`fixed bottom-0 left-0 w-full bg-black text-white z-50 px-3 sm:px-6
-      transition-all duration-300 ease-in-out
+      transition-all duration-300 ease-in-out 
       ${fullscreen ? "h-14 opacity-90 overflow-hidden py-1" : "py-2 sm:py-3 opacity-100 h-auto"}`}
     >
       <audio
@@ -368,7 +368,7 @@ const Player = () => {
 
       {/* Minimal bar when fullscreen */}
       {fullscreen && (
-        <div className="flex items-center justify-between h-14 px-3 sm:px-6 gap-4">
+        <div className="flex items-center justify-between h-14 px-3 sm:px-6 gap-4 pb-2">
           {/* Album art */}
           <img
             src={currentSong.albumArt}

@@ -4,7 +4,7 @@ const Home = () => {
   const { projects, blogPosts, skills, featured, tools, personalProjects, categories } = data;
 
   return (
-    <main className="flex flex-col gap-12 py-8    bg-black min-h-screen">
+    <main className="flex flex-col gap-12 py-8    bg-black min-h-screen mt-12">
 <section className="mb-8 px-4 sm:px-6">
   <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-12 md:gap-32 max-w-full overflow-hidden">
     <div className="flex flex-col items-center md:items-start max-w-full md:max-w-3xl text-center md:text-left">
@@ -108,7 +108,7 @@ const Home = () => {
 </section>
 
       
-{/* 
+
 
 
 
@@ -155,28 +155,33 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-bold text-white mb-4">Side Projects</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {personalProjects.map((project, idx) => (
-            <a
-              key={idx}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/5 hover:bg-white/10 transition-all duration-300 ease-in-out rounded-xl p-4 block hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
-            >
-              <img
-                src={project.image}
-                className="w-full object-cover rounded mb-4"
-                alt={project.title}
-              />
-              <p className="text-white font-semibold hover:text-green transition-colors">{project.title}</p>
-              <p className="text-white/60">{project.description}</p>
-            </a>
-          ))}
-        </div>
-      </section>
+<section>
+  <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Side Projects</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+    {personalProjects.map((project, idx) => (
+      <a
+        key={idx}
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-white/5 hover:bg-white/10 transition-all duration-300 ease-in-out rounded-xl p-3 sm:p-4 block hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
+      >
+        <img
+          src={project.image}
+          className="w-full object-cover rounded mb-3 sm:mb-4"
+          alt={project.title}
+        />
+        <p className="text-white font-semibold hover:text-green transition-colors text-base sm:text-lg">
+          {project.title}
+        </p>
+        <p className="text-white/60 text-sm sm:text-base">
+          {project.description}
+        </p>
+      </a>
+    ))}
+  </div>
+</section>
+
 
 
 
@@ -201,7 +206,7 @@ const Home = () => {
             </a>
           ))}
         </div>
-      </section> */}
+      </section>
 
     </main>
   );
