@@ -32,11 +32,13 @@ const Sidebar = ({ isOpen, onClose }) => {
   }, [isOpen, onClose]);
 
   return (
-    <aside
-      ref={sidebarRef}
-      className={`fixed lg:static top-0 left-0 w-64 h-full bg-black text-white z-40 transform transition-transform duration-300 ease-in-out
-      ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 p-4 overflow-y-auto`}
-    >
+<aside
+  ref={sidebarRef}
+  className={`fixed lg:sticky top-0 left-0 h-screen w-64 bg-black text-white z-40 transform transition-transform duration-300 ease-in-out mt-12
+  ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 p-4 overflow-y-auto`}
+>
+
+
       <div className="mb-6 px-2 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="Logo" className="w-10" />

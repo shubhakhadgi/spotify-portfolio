@@ -61,7 +61,7 @@ const Header = ({ onMenuClick }) => {
       {/* Optional logo or brand name */}
       <div className="flex-1 flex justify-center lg:justify-start">
         <span className="text-lg font-semibold text-green-400 hidden sm:inline-block">
-          SHUBHA
+          
         </span>
       </div>
 

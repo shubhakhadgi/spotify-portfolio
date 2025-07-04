@@ -3,39 +3,64 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Gotham';
-    src: url('/fonts/Gotham-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'Gotham';
-    src: url('/fonts/Gotham-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'Gotham';
-    src: url('/fonts/Gotham-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'Gotham';
-    src: url('/fonts/Gotham-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-  }
-/* Spotify-style scrollbar */
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+}
+
+.scrollbar-no-arrows::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.scrollbar-spotify {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.scrollbar-spotify:hover {
+  scrollbar-color: #1DB954 transparent;
+}
+
 .scrollbar-spotify::-webkit-scrollbar {
   height: 4px;
+  background: transparent;
 }
 
 .scrollbar-spotify::-webkit-scrollbar-track {
@@ -52,23 +77,28 @@
   background-color: #1DB954;
 }
 
-/* Hide arrows (Chrome/Safari) */
-.scrollbar-no-arrows::-webkit-scrollbar-button {
-  display: none;
-  width: 0;
-  height: 0;
-}
-
-/* Firefox styling */
-.scrollbar-spotify {
+.thin-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
-}
-.group:hover .scrollbar-spotify {
-  scrollbar-color: #1DB954 transparent;
+  scrollbar-color: #2e2e2e transparent;
 }
 
-/* Optional: hide scrollbar until hover */
-.scrollbar-spotify::-webkit-scrollbar {
+.thin-scrollbar::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
   background: transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #2e2e2e;
+  border-radius: 9999px;
+  border: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.thin-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #444;
 }

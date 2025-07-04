@@ -4,7 +4,7 @@ const Home = () => {
   const { projects, blogPosts, skills, featured, tools, personalProjects, categories } = data;
 
   return (
-    <main className="flex flex-col gap-12 py-8    bg-black min-h-screen mt-12">
+    <main className="flex flex-col gap-12 py-8    bg-black min-h-screen mt-12 ">
 <section className="mb-8 px-4 sm:px-6">
   <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-12 md:gap-32 max-w-full overflow-hidden">
     <div className="flex flex-col items-center md:items-start max-w-full md:max-w-3xl text-center md:text-left">
