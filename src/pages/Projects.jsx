@@ -14,7 +14,7 @@ const Projects = () => {
       </div>
 
       {/* Responsive Project Cards (Horizontal Scroll for Mobile) */}
-      <div className="overflow-x-auto scrollbar-hide -mx-2 sm:mx-0">
+      <div className=" scrollbar-hide -mx-2 sm:mx-0">
         <div className="flex sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 px-2 sm:px-0">
           {projects.map((project, index) => (
             <div

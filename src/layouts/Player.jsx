@@ -56,34 +56,6 @@ const Player = () => {
     }
   }, [isPlaying, currentSong]);
 
-  // Scroll listener to minimize player
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-
-          if (currentScrollY > lastScrollY + 10 && !fullscreen) {
-            setFullscreen(true); // minimize
-          } else if (currentScrollY < lastScrollY - 10 && fullscreen) {
-            setFullscreen(false); // expand
-          }
-
-          lastScrollY = currentScrollY;
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [fullscreen]);
-
   // Other audio functions
   const handleTimeUpdate = () => {
     if (!isDragging && audioRef.current) {
