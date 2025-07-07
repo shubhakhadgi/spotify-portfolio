@@ -1,4 +1,6 @@
 import data from '../data.json';
+import ScrollToTop from "../components/ScrollToTop";
+
 import {
   PenSquare,
 } from "lucide-react";
@@ -7,7 +9,7 @@ const blogs = data.blogs;
 const Blog = () => {
   return (
     <div className=" min-h-screen px-6 py-8 text-white font-sans mt-12">
-      
+      <ScrollToTop/>
             <section className='pb-8'>
               <div className="flex items-center gap-3 mb-4">
                 <PenSquare size={32} className="text-green-500" />
