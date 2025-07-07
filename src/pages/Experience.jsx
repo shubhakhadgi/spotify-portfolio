@@ -6,7 +6,7 @@ const Experience = () => {
   const { experience, education, courses } = data;
 
   return (
-    <main className="bg-gradient-to-b from-[#121212] to-black min-h-screen text-white mt-12">
+    <main className=" min-h-screen text-white mt-12">
       {/* Header */}
       <section className="flex flex-col md:flex-row items-center md:items-end p-6 md:p-8 gap-4 md:gap-6 bg-gradient-to-r from-green-700 to-green-500">
         <img

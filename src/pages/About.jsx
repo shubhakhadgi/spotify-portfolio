@@ -5,7 +5,7 @@ const About = () => {
   const { currentlyBuilding, industries, nations, testimonials } = data;
 
   return (
-    <main className="flex-1 bg-black text-white font-sans overflow-x-hidden mt-12">
+    <main className="flex-1 text-white font-sans overflow-x-hidden mt-12">
       <div className="w-full max-w-screen mx-auto">
         {/* Hero Section */}
 <section className="flex flex-col sm:flex-row items-start gap-6 px-4 sm:px-8 py-6">
@@ -17,20 +17,26 @@ const About = () => {
     />
   </div>
   <div className="text-left">
-    <p className="uppercase tracking-widest text-sm text-gray-400">Frontend Developer</p>
-    <h1 className="text-5xl font-bold mt-1 text-white">Shubha</h1>
-    <p className="text-gray-400 mt-2 max-w-md">
+    <p className="uppercase tracking-widest text-xs sm:text-sm md:text-base text-gray-400">
+      Frontend Developer
+    </p>
+    <h1 className="text-5xl font-bold mt-1 text-white">
+      Shubha
+    </h1>
+    <p className="text-gray-400 mt-2 max-w-md text-sm sm:text-base md:text-lg">
       I build clean, fast, and responsive UIs with a design-first mindset.
     </p>
   </div>
 </section>
 
 
+
         {/* Bio */}
         <section className="px-4 sm:px-8 py-6">
-          <p className="text-lg leading-relaxed max-w-4xl text-white">
-            I design and build responsive, user-friendly interfaces using React, Tailwind, and modern web tools. I care about clean code, meaningful UX, and bringing ideas to life with intention.
-          </p>
+<p className="text-gray-400 text-md md:text-lg max-w-md mt-2">
+  I design and build responsive, user-friendly interfaces using React, Tailwind, and modern web tools. I care about clean code, meaningful UX, and bringing ideas to life with intention.
+</p>
+
           <p className="text-gray-500 mt-4 max-w-4xl">
             Away from the screen, I’m usually sketching, painting, growing plants, or playing music. Creativity keeps me going — on and off the code.
           </p>
@@ -70,7 +76,7 @@ const About = () => {
                 <div
                   key={title}
                   tabIndex={0}
-                  className="relative min-w-[200px] rounded-lg shadow-lg cursor-pointer overflow-hidden flex-shrink-0 hover:scale-105 hover:shadow-xl hover:ring-1 hover:ring-green transform transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="relative min-w-[200px] p-2 rounded-lg shadow-lg cursor-pointer overflow-hidden  hover:shadow-xl hover:ring-1 hover:ring-green transform transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
                   <img src={img} alt={title} className="w-full h-40 object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-black via-transparent to-transparent" />
@@ -138,14 +144,14 @@ const About = () => {
         </section>
 
         {/* Testimonials */}
-<section className="px-4 sm:px-8 py-6">
+<section className="px-4 sm:px-8 py-6 mb-8 ">
   <h2 className="text-xl font-bold mb-4 text-white">What Colleagues Say</h2>
   <div className="flex gap-4 overflow-x-auto scrollbar-spotify scrollbar-no-arrows py-2 pl-4 pr-4">
     {testimonials.map(({ name, feedback, img }, index) => (
       <div
         key={index}
         tabIndex={0}
-        className="flex-shrink-0 w-64 sm:w-72 h-64 sm:h-72 flex flex-col justify-center items-center bg-gray-900 rounded-xl p-6 cursor-pointer"
+        className="flex-shrink-0 my-2 w-64 sm:w-72 h-64 sm:h-72 flex flex-col justify-center items-center bg-gray-900 rounded-xl p-6 cursor-pointer"
       >
         <img
           src={img}

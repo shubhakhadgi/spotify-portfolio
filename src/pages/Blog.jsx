@@ -3,7 +3,7 @@ const blogs = data.blogs;
 
 const Blog = () => {
   return (
-    <div className="bg-black min-h-screen px-6 py-8 text-white font-sans mt-12">
+    <div className=" min-h-screen px-6 py-8 text-white font-sans mt-12">
 
       <h1 className="text-4xl font-bold mb-8">My Blogs</h1>
       
