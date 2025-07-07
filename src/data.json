@@ -71,7 +71,7 @@
     ]
   },
   {
-    "title": "Frontend Developer Bootcamper",
+    "title": "React Bootcamp",
     "org": "Proshore Nepal Pvt. Ltd",
     "time": "Nov 2023 – Feb 2024",
     "url": "https://proshore.eu/",
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "title": "Associate Developer",
+    "title": "Web Designer & Developer",
     "org": "Falsebug Technology",
     "time": "Oct 2023 – June 2024",
     "url": "https://np.linkedin.com/company/falsebug-technology",
@@ -101,7 +101,7 @@
     ]
   },
   {
-    "title": "Web Developer",
+    "title": "Javascript Developer",
     "org": "Longtail E-Media",
     "time": "Sept 2022 – Oct 2023",
     "url": "https://www.longtail.info/",
@@ -123,7 +123,7 @@
       "degree": "Plus Two - Management",
       "school": "Trinity International College",
       "year": "2017 – 2019",
-      "cgpa": "3.6",
+      "cgpa": "3.60",
       "info": "Built foundational knowledge in accounting, business studies, and economics while exploring early interests in computer applications."
     },
     {
@@ -325,7 +325,7 @@
     {
       "title": "Blogs",
 "image": "/assets/img/cover-blogs.png",
-      "link": "/blogs"
+      "link": "/blog"
     },
     {
       "title": "Skills",

@@ -11,7 +11,7 @@ const Home = () => {
       <h1 className="text-4xl sm:text-5xl font-black text-green pt-8">
         Hey there, I'm Shubha!
       </h1>
-      <p class="text-white/80 mt-4 text-base md:text-lg">
+      <p className="text-white/80 mt-4 text-base md:text-lg">
         I'm a front-end developer focused on{" "}
         <i className="hover:text-green cursor-pointer">
           performance, usability, and design
@@ -25,7 +25,7 @@ const Home = () => {
     src="assets/img/floating-img.webp"
     alt="Floating 3D element"
     className="w-64 sm:w-80 md:w-96 me-0 md:me-16 mx-auto md:mx-0 animate-floatTilt transition-transform duration-300 hover:scale-105 hover:rotate-2"
-    loading="eager" fetchpriority="high"
+    loading="eager" fetchPriority="high"
   />
 </div>
 
