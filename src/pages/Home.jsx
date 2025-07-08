@@ -1,4 +1,5 @@
 import data from '../data.json';
+import FloatingImage from '../components/FloatingImage';
 import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
@@ -22,14 +23,7 @@ const Home = () => {
         only look good but work beautifully too.
       </p>
     </div>
-<div className="flex-shrink-0 mt-8 md:mt-0 pt-10">
-  <img
-    src="assets/img/floating-img.webp"
-    alt="Floating 3D element"
-    className="w-64 sm:w-80 md:w-96 me-0 md:me-16 mx-auto md:mx-0 animate-floatTilt transition-transform duration-300 hover:scale-105 hover:rotate-2"
-    loading="eager" fetchPriority="high"
-  />
-</div>
+<FloatingImage/>
 
 
   </div>

@@ -74,7 +74,7 @@ const handleScroll = (e) => {
   const throttledHandleScroll = useThrottle(handleScroll, 100);
 
   return (
-    <div className="relative min-h-screen text-white overflow-hidden">
+    <div className="relative min-h-screen text-white overflow-hidden select-none">
       <ParticlesBackground />
       <div className="absolute inset-0 z-[-1] bg-gradient-to-b from-black via-gray-900 to-black" />
 
