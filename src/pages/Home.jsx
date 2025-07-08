@@ -41,7 +41,7 @@ const Home = () => {
       <a
         key={idx}
         href={category.link}
-        className="w-full sm:w-auto md:w-64 rounded-xl bg-white/5 p-3 transition-transform duration-300 ease-in-out hover:shadow-spotify hover:ring-1 hover:ring-green"
+        className="w-full sm:w-auto md:w-64 rounded-xl bg-gray-200 p-3 transition-transform duration-300 ease-in-out hover:shadow-spotify hover:ring-1 hover:ring-green"
       >
         <div className="overflow-visible">
           <img
@@ -58,7 +58,7 @@ const Home = () => {
   </div>
 </section>
 
-<section className="bg-white/5 rounded-xl p-6">
+<section className="bg-gray-200  rounded-xl p-6">
   <h2 className="text-3xl font-bold text-white mb-6">Core Skills</h2>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -95,7 +95,7 @@ const Home = () => {
         href={item.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-white/5 rounded-xl p-4 block transition-transform duration-300 ease-in-out hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
+        className="bg-gray-200  rounded-xl p-4 block transition-transform duration-300 ease-in-out hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
       >
         <img
           src={item.image}
@@ -115,7 +115,7 @@ const Home = () => {
           href={featured.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative block bg-white/5 hover:bg-white/10 rounded-xl p-6 transition-all duration-300 ease-in-out hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
+          className="relative block bg-gray-200  hover:bg-gray-100 rounded-xl p-6 transition-all duration-300 ease-in-out hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
         >
           <img
             src={featured.image}
@@ -133,7 +133,7 @@ const Home = () => {
           {tools.map((tool, idx) => (
             <div
   key={idx}
-  className="group bg-white/5 transition-all duration-300 ease-in-out p-4 rounded-xl flex flex-col items-center justify-center text-center hover:bg-white/10 hover:shadow-spotify cursor-pointer"
+  className="group bg-gray-200  transition-all duration-300 ease-in-out p-4 rounded-xl flex flex-col items-center justify-center text-center hover:bg-gray-100  hover:shadow-spotify cursor-pointer"
 >
   <div className="w-16 h-16 mb-3 transition-transform group-hover:scale-105">
     <img
@@ -160,7 +160,7 @@ const Home = () => {
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-white/5 hover:bg-white/10 transition-all duration-300 ease-in-out rounded-xl p-3 sm:p-4 block hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
+        className="bg-gray-200  hover:bg-gray-100  transition-all duration-300 ease-in-out rounded-xl p-3 sm:p-4 block hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
       >
         <img
           src={project.image}
@@ -190,7 +190,7 @@ const Home = () => {
               href={post.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/5 hover:bg-white/10 transition-all duration-300 ease-in-out rounded-xl p-4 block hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
+              className="bg-gray-200  hover:bg-gray-100  transition-all duration-300 ease-in-out rounded-xl p-4 block hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
             >
               <img
                 src={post.image}

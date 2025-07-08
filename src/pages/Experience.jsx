@@ -100,7 +100,7 @@ const Experience = () => {
               href={course.certificate}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-white/5 hover:bg-white/10 hover:ring-1 hover:ring-green duration-300 ease-in-out text-white p-4 rounded-lg transition"
+              className="block bg-gray-200  hover:bg-gray-100  hover:ring-1 hover:ring-green duration-300 ease-in-out text-white p-4 rounded-lg transition"
             >
               <h3 className="font-semibold text-sm md:text-base">{course.name}</h3>
               <p className="text-xs md:text-sm text-gray-300">{course.platform} • {course.year}</p>

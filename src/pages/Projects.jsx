@@ -35,7 +35,7 @@ const Projects = () => {
           <p className="text-sm text-gray-400 line-clamp-3">{project.description}</p>
           <div className="mt-2 flex flex-wrap gap-1">
             {project.tech.map((tech, i) => (
-              <span key={i} className="bg-white/10 text-xs px-2 py-1 rounded-full">
+              <span key={i} className="bg-gray-100  text-xs px-2 py-1 rounded-full">
                 {tech}
               </span>
             ))}

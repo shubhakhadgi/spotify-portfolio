@@ -19,7 +19,7 @@ const Blog = () => {
     href={url}
     target="_blank"
     rel="noopener noreferrer"
-    className="relative bg-white/5 hover:bg-white/10 transition-all duration-300 ease-in-out rounded-xl overflow-hidden hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
+    className="relative bg-gray-200  hover:bg-gray-100  transition-all duration-300 ease-in-out rounded-xl overflow-hidden hover:shadow-spotify hover:ring-1 hover:ring-green cursor-pointer"
   >
     {img && (
 <div className="relative">
