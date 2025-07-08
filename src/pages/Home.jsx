@@ -1,17 +1,19 @@
 import data from '../data.json';
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   const { projects, blogPosts, skills, featured, tools, personalProjects, categories } = data;
 
   return (
     <main className="flex flex-col gap-12 py-8     min-h-screen mt-12 ">
+      <ScrollToTop/>
 <section className="mb-8 px-4 sm:px-6">
   <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-12 md:gap-32 max-w-full overflow-hidden">
     <div className="flex flex-col items-center md:items-start max-w-full md:max-w-3xl text-center md:text-left">
       <h1 className="text-4xl sm:text-5xl font-black text-green pt-8">
         Hey there, I'm Shubha!
       </h1>
-      <p class="text-white/80 mt-4 text-base md:text-lg">
+      <p className="text-white/80 mt-4 text-base md:text-lg">
         I'm a front-end developer focused on{" "}
         <i className="hover:text-green cursor-pointer">
           performance, usability, and design
@@ -25,7 +27,7 @@ const Home = () => {
     src="assets/img/floating-img.webp"
     alt="Floating 3D element"
     className="w-64 sm:w-80 md:w-96 me-0 md:me-16 mx-auto md:mx-0 animate-floatTilt transition-transform duration-300 hover:scale-105 hover:rotate-2"
-    loading="eager" fetchpriority="high"
+    loading="eager" fetchPriority="high"
   />
 </div>
 

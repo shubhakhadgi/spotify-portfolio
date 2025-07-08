@@ -1,6 +1,7 @@
 import React from "react";
 import { ExternalLink, PlayCircle, Layers } from "lucide-react";
 import data from "../data.json";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Projects = () => {
   const { projects, personalProjects } = data;
@@ -8,6 +9,7 @@ const Projects = () => {
   return (
     <main className="flex-1 w-full max-w-full  text-white px-4 sm:px-6 pb-32 overflow-x-hidden mt-12">
       {/* Header */}
+      <ScrollToTop/>
       <div className="flex items-center gap-3 mb-4 pt-6">
         <Layers size={32} className="text-green-500" />
         <h1 className="text-3xl font-bold">Projects</h1>

@@ -1,11 +1,12 @@
 import { BarChart3 } from "lucide-react";
 import data from '../data.json';
-
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function SkillsPage() {
    const { skills, tools, featured } = data;
   return (
     <main className="px-6 py-8 text-white space-y-12 mt-12">
+      <ScrollToTop/>
       <section>
         <div className="flex items-center gap-3 mb-4">
           <BarChart3 size={32} className="text-green-500" />

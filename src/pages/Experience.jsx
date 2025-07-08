@@ -1,12 +1,14 @@
 import React from "react";
 import { PlayCircle } from "lucide-react"; 
 import data from '../data.json';
+import ScrollToTop from "../components/ScrollToTop";
 
 const Experience = () => {
   const { experience, education, courses } = data;
 
   return (
     <main className=" min-h-screen text-white mt-12">
+      <ScrollToTop/>
       {/* Header */}
       <section className="flex flex-col md:flex-row items-center md:items-end p-6 md:p-8 gap-4 md:gap-6 bg-gradient-to-r from-green-700 to-green-500">
         <img

@@ -1,11 +1,28 @@
 import data from '../data.json';
+import ScrollToTop from "../components/ScrollToTop";
+
+import {
+  PenSquare,
+} from "lucide-react";
 const blogs = data.blogs;
 
 const Blog = () => {
   return (
     <div className=" min-h-screen px-6 py-8 text-white font-sans mt-12">
-
-      <h1 className="text-4xl font-bold mb-8">My Blogs</h1>
+      <ScrollToTop/>
+            <section className='pb-8'>
+              <div className="flex items-center gap-3 mb-4">
+                <PenSquare size={32} className="text-green-500" />
+                <h1 className="text-3xl font-bold">My Blogs</h1>
+              </div>
+              <p className="text-white/70 text-lg max-w-xl">
+  I write about my journey as a developer—projects, challenges, and lessons learned. 
+  You can find more of my blogs on{" "}
+  <a href="https://dev.to/shubha_k" target="_blank" rel="noopener noreferrer" className="text-green-400 underline hover:text-green-300">
+    dev.to
+  </a>
+</p>
+            </section>
       
       {Object.entries(blogs).map(([category, posts]) => (
         <section key={category} className="mb-12">

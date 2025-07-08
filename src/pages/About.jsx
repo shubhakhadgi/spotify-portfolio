@@ -1,11 +1,13 @@
 import React from "react";
 import data from '../data.json';
+import ScrollToTop from "../components/ScrollToTop";
 
 const About = () => {
   const { currentlyBuilding, industries, nations, testimonials } = data;
 
   return (
     <main className="flex-1 text-white font-sans overflow-x-hidden mt-12">
+      <ScrollToTop />
       <div className="w-full max-w-screen mx-auto">
         {/* Hero Section */}
 <section className="flex flex-col sm:flex-row items-start gap-6 px-4 sm:px-8 py-6">
