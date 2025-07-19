@@ -27,38 +27,6 @@
     "img": "assets/img/tech.png"
   }
 ],
-  "tourDates": [
-    "2021 — Wrote my first HTML tag.",
-    "2022 — Deployed a full-stack React app.",
-    "2023 — Mastered Tailwind, Vite, and component design.",
-    "2024 — Launched this Spotify-style portfolio."
-  ],
-  "fansAlsoLike": [
-    {
-      "name": "Kent C. Dodds",
-      "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80"
-    },
-    {
-      "name": "Theo",
-      "img": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=64&q=80"
-    },
-    {
-      "name": "Lee Robinson",
-      "img": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=64&q=80"
-    },
-    {
-      "name": "Sarah Drasner",
-      "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80"
-    },
-    {
-      "name": "Wes Bos",
-      "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=64&q=80"
-    },
-    {
-      "name": "Adrian Twarog",
-      "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=64&q=80"
-    }
-  ],
 "experience": [
   {
     "title": "Frontend Lead (React)",
@@ -71,7 +39,7 @@
     ]
   },
   {
-    "title": "React Bootcamp",
+    "title": "React Bootcamper",
     "org": "Proshore Nepal Pvt. Ltd",
     "time": "Nov 2023 – Feb 2024",
     "url": "https://proshore.eu/",
@@ -81,7 +49,7 @@
     ]
   },
   {
-    "title": "Website Developer",
+    "title": "Web Developer",
     "org": "Freelancing",
     "time": "June 2024 – Present",
     "url": "https://np.linkedin.com/in/shubhakhadgi",
@@ -91,17 +59,17 @@
     ]
   },
   {
-    "title": "Web Designer & Developer",
+    "title": "Creative Designer",
     "org": "Falsebug Technology",
     "time": "Oct 2023 – June 2024",
     "url": "https://np.linkedin.com/company/falsebug-technology",
     "notes": [
-      "Crafted captivating websites using WordPress and Figma for clients like Bonum Cha, Vivid Interiors, and Akarshan Clinic.",
+      "Created promotional content for clients across various industries and designed engaging web interfaces tailored to their needs.",
       "Planned and conducted weekly meetings with individual clients to understand their requirements and gather feedback."
     ]
   },
   {
-    "title": "Javascript Developer",
+    "title": "Web Developer & Creative Designer",
     "org": "Longtail E-Media",
     "time": "Sept 2022 – Oct 2023",
     "url": "https://www.longtail.info/",
@@ -161,7 +129,7 @@
     },
     {
       "title": "Hotel Thrive",
-      "description": "A personal tool for saving, tagging, and searching through reusable code snippets.",
+      "description": "A user-friendly web app for hotel booking and management, featuring real-time room availability and secure payment integration.",
       "tech": ["HTML", "CSS", "Javascript"],
       "link": "https://www.hotelthrive.com/",
        "image": "assets/img/hotelthrive.png"
@@ -240,11 +208,11 @@
   }
 ],
 "featured": {
-  "title": "Personal Portfolio",
-  "artist": "Built with React + RTK + TailwindCSS",
-  "description": "A comprehensive medical dashboard to manage appointments, analytics, and patient information in real-time.",
+  "title": "My first portfolio",
+  "artist": "Built with HTML, CSS, and JavaScript",
+  "description": "My first portfolio website featuring responsive design and interactive elements",
   "image": "assets/img/personal-portfolio.png",
-  "link": "https://shubhakhadgi.com.np/",
+  "link": "https://shubha-first-portfolio.vercel.app/",
   "tech": ["HTML", "CSS", "JavaScript"]
 },
 

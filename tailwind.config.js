@@ -33,9 +33,27 @@ export default {
             transform: 'translateY(-10px) rotateZ(1.5deg)',
           },
         },
+         floating3d: {
+          '0%, 100%': {
+      transform: 'translateX(0px) translateY(0px) rotateZ(0deg)',
+    },
+    '20%': {
+      transform: 'translateX(-5px) translateY(-10px) rotateZ(1deg)',
+    },
+    '40%': {
+      transform: 'translateX(5px) translateY(-15px) rotateZ(-1.1deg)',
+    },
+    '60%': {
+      transform: 'translateX(-4px) translateY(-8px) rotateZ(1.1deg)',
+    },
+    '80%': {
+      transform: 'translateX(3px) translateY(-12px) rotateZ(-0.9deg)',
+    },
+        },
       },
       animation: {
         floatTilt: 'floatTilt 6s ease-in-out infinite',
+        floating3d: "floating3d 6s ease-in-out infinite",
       },
     
 

@@ -2,16 +2,12 @@ import React, { useState, useRef } from "react";
 
 const FloatingImage = () => {
   const containerRef = useRef(null);
-  const [style, setStyle] = useState({
-    transform: "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)",
-    filter: "drop-shadow(0 10px 10px rgba(0,0,0,0.2))",
-    transition: "transform 0.3s ease, filter 0.3s ease",
-    transformStyle: "preserve-3d",
-    willChange: "transform",
-  });
+  const [style, setStyle] = useState({});
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseMove = (e) => {
     if (!containerRef.current) return;
+    setIsHovering(true);
 
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -22,23 +18,20 @@ const FloatingImage = () => {
     const rotateX = ((y - centerY) / centerY) * -8;
     const rotateY = ((x - centerX) / centerX) * 8;
 
-    const shadowX = ((centerX - x) / centerX) * 15;
-    const shadowY = ((centerY - y) / centerY) * 15;
+setStyle({
+  transform: `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`,
+  transition: "transform 0.1s ease-out",
+  transformStyle: "preserve-3d",
+  willChange: "transform",
+});
 
-    setStyle({
-      transform: `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`,
-      filter: `drop-shadow(${shadowX}px ${shadowY}px 15px rgba(0,0,0,0.3))`,
-      transition: "transform 0.1s ease-out, filter 0.1s ease-out",
-      transformStyle: "preserve-3d",
-      willChange: "transform",
-    });
   };
 
   const handleMouseLeave = () => {
+    setIsHovering(false);
     setStyle({
       transform: "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)",
-      filter: "drop-shadow(0 10px 10px rgba(0,0,0,0.2))", 
-      transition: "transform 0.3s ease-in-out, filter 0.3s ease-in-out",
+      transition: "transform 0.6s ease-in-out",
       transformStyle: "preserve-3d",
       willChange: "transform",
     });
@@ -47,7 +40,9 @@ const FloatingImage = () => {
   return (
     <div
       ref={containerRef}
-      className="flex-shrink-0 py-8 md:mt-0 cursor-pointer"
+      className={`flex-shrink-0 py-8 md:mt-0 cursor-pointer ${
+        isHovering ? "" : "animate-floating3d"
+      }`}
       style={style}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -57,7 +52,7 @@ const FloatingImage = () => {
       <img
         src="assets/img/floating-img.webp"
         alt="Floating 3D element"
-        className="w-80 sm:w-96 md:w-[28rem] me-0 md:me-16 mx-auto md:mx-0"
+        className="w-80 sm:w-96 md:w-[28rem] me-0 md:me-16 mx-auto md:mx-0 pointer-events-none select-none"
         loading="eager"
         fetchPriority="high"
         draggable={false}
