@@ -18,7 +18,7 @@ const Blog = () => {
               <p className="text-white/70 text-lg max-w-xl">
   I write about my journey as a developer—projects, challenges, and lessons learned. 
   You can find more of my blogs on{" "}
-  <a href="https://dev.to/shubha_k" target="_blank" rel="noopener noreferrer" className="text-green-400 underline hover:text-green-300">
+  <a href="https://dev.to/shubhakhadgi" target="_blank" rel="noopener noreferrer" className="text-green-400 underline hover:text-green-300">
     dev.to
   </a>
 </p>

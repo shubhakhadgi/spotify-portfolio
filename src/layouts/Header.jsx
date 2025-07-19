@@ -20,7 +20,7 @@ const Header = ({ onMenuClick }) => {
 
 <div className="flex items-center space-x-4 min-w-0 max-w-full overflow-x-auto no-scrollbar whitespace-nowrap">
   <a
-    href="https://instagram.com/yourusername"
+    href="https://www.instagram.com/strokes_byshubha/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
@@ -31,7 +31,7 @@ const Header = ({ onMenuClick }) => {
   </a>
 
   <a
-    href="https://linkedin.com/in/yourusername"
+    href="https://linkedin.com/in/shubhakhadgi"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="LinkedIn"
@@ -42,7 +42,7 @@ const Header = ({ onMenuClick }) => {
   </a>
 
   <a
-    href="https://github.com/yourusername"
+    href="https://github.com/shubhakhadgi"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="GitHub"
@@ -53,7 +53,7 @@ const Header = ({ onMenuClick }) => {
   </a>
 
   <a
-    href="https://dev.to/yourusername"
+    href="https://dev.to/shubhakhadgi"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Dev.to"

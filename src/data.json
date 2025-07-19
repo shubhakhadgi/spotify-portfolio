@@ -168,7 +168,7 @@
     "title": "To-do Application",
     "description": "A to-do app built with React and json-server for data storage and retrieval.",
     "tech": ["ReactJS", "json-server"],
-    "link": "https://github.com/shubhaaaaaaa/react-todo",
+    "link": "https://github.com/shubhakhadgi/react-todo",
     "image": "assets/img/todo-app.png"
   },
   {
@@ -221,19 +221,19 @@
     "title": "Mastering React Hooks as a beginner - useCallback()",
     "subtitle": "React Essentials",
     "image": "assets/img/blog1.png",
-    "link": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usecallback-52oe"
+    "link": "https://dev.to/shubhakhadgi/mastering-react-hooks-as-a-beginner-usecallback-52oe"
   },
   {
     "title": "useRef Hook: The Silent Helper",
     "subtitle": "React Essentials",
     "image": "assets/img/blog3.png",
-    "link": "https://dev.to/shubha_k/useref-hook-the-silent-helper-2dpf"
+    "link": "https://dev.to/shubhakhadgi/useref-hook-the-silent-helper-2dpf"
   },
   {
     "title": "React Interview Prep Guide 1: Core Concepts Made Easy",
     "subtitle": "React Essentials",
     "image": "assets/img/blog2.png",
-    "link": "https://dev.to/shubha_k/jsx-and-babel-react-interview-essentials-3e42"
+    "link": "https://dev.to/shubhakhadgi/jsx-and-babel-react-interview-essentials-3e42"
   }
 ],
 "skills": [
@@ -344,7 +344,7 @@
       {
         "img": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
         "title": "React Interview Prep Guide 1: Core Concepts Made Easy",
-        "url": "https://dev.to/shubha_k/jsx-and-babel-react-interview-essentials-3e42",
+        "url": "https://dev.to/shubhakhadgi/jsx-and-babel-react-interview-essentials-3e42",
         "date": "April 22, 2025"
       }
     ],
@@ -352,44 +352,44 @@
       {
         "img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
         "title": "Mastering React Hooks as a beginner - useCallback()",
-        "url": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usecallback-52oe",
+        "url": "https://dev.to/shubhakhadgi/mastering-react-hooks-as-a-beginner-usecallback-52oe",
         "date": "April 18, 2025"
       },
       {
         "img": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
         "title": "useRef Hook: The Silent Helper",
-        "url": "https://dev.to/shubha_k/useref-hook-the-silent-helper-2dpf",
+        "url": "https://dev.to/shubhakhadgi/useref-hook-the-silent-helper-2dpf",
         "date": "April 10, 2025"
       },
       {
         "img": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&q=80",
         "title": "The Power of React: Why It’s More Than Just Components",
-        "url": "https://dev.to/shubha_k/the-power-of-react-why-its-more-than-just-components-3fa1",
+        "url": "https://dev.to/shubhakhadgi/the-power-of-react-why-its-more-than-just-components-3fa1",
         "date": "April 9, 2025"
       },
 {
   "img": "https://images.unsplash.com/photo-1669023414166-a4cc7c0fe1f5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "title": "What is JSX and Why Do We Use It in React?",
-  "url": "https://dev.to/shubha_k/what-is-jsx-and-why-do-we-use-it-in-react-3f4o",
+  "url": "https://dev.to/shubhakhadgi/what-is-jsx-and-why-do-we-use-it-in-react-3f4o",
   "date": "April 9, 2025"
 }
 ,
       {
         "img": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
         "title": "Mastering React Hooks as a beginner - useMemo()",
-        "url": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usememo-12j9",
+        "url": "https://dev.to/shubhakhadgi/mastering-react-hooks-as-a-beginner-usememo-12j9",
         "date": "April 8, 2025"
       },
       {
         "img": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
         "title": "Mastering React Hooks as a beginner - useState()",
-        "url": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-usestate-41p4",
+        "url": "https://dev.to/shubhakhadgi/mastering-react-hooks-as-a-beginner-usestate-41p4",
         "date": "April 8, 2025"
       },
       {
         "img": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80",
         "title": "Mastering React Hooks as a beginner - useEffect()",
-        "url": "https://dev.to/shubha_k/mastering-react-hooks-as-a-beginner-25eg",
+        "url": "https://dev.to/shubhakhadgi/mastering-react-hooks-as-a-beginner-25eg",
         "date": "April 8, 2025"
       }
     ],
@@ -397,7 +397,7 @@
       {
         "img": "https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80",
         "title": "What Is Hoisting in JavaScript?",
-        "url": "https://dev.to/shubha_k/what-is-hoisting-in-javascript-5g8a",
+        "url": "https://dev.to/shubhakhadgi/what-is-hoisting-in-javascript-5g8a",
         "date": "June 3, 2025"
       }
     ]
