@@ -10,7 +10,7 @@ const Home = () => {
 <section className="mb-8 px-4 sm:px-6">
   <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-12 md:gap-32 max-w-full overflow-hidden">
     <div className="flex flex-col items-center md:items-start max-w-full md:max-w-3xl text-center md:text-left">
-      <h1 className="text-4xl sm:text-5xl font-black text-green pt-8">
+      <h1 className="text-4xl sm:text-5xl font-black text-green pt-0 md:pt-8">
         Hey there, I'm Shubha!
       </h1>
       <p className="text-white/80 mt-4 text-base md:text-lg">
@@ -22,7 +22,7 @@ const Home = () => {
         only look good but work beautifully too.
       </p>
     </div>
-<div className="flex-shrink-0 mt-8 md:mt-0 pt-10">
+<div className="flex-shrink-0 pt-0 md:pt-10">
   <img
     src="assets/img/floating-img.webp"
     alt="Floating 3D element"
