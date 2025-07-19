@@ -8,6 +8,8 @@ export default {
       black: '#121212',
       gray: {
         900: '#191414',
+        200: '#221f1f',
+        100: '#2e2b2b',
       }   
       },
       fontFamily: {

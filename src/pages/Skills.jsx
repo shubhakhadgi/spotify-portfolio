@@ -21,14 +21,14 @@ export default function SkillsPage() {
         <h2 className="text-2xl font-semibold mb-4">Core Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {skills.map((skill, idx) => (
-<div key={idx} className="bg-white/5 rounded-xl p-4 hover:shadow-spotify ">
+<div key={idx} className="bg-gray-200  rounded-xl p-4 hover:shadow-spotify ">
   <div className="flex justify-between items-center mb-2">
     <div className="flex items-center gap-2">
       <h3 className="text-white font-semibold">{skill.title}</h3>
     </div>
     <span className="text-white/60 text-sm">{skill.level}%</span>
   </div>
-  <div className="w-full bg-white/10 h-2 rounded">
+  <div className="w-full bg-gray-100  h-2 rounded">
     <div
       className="h-2 rounded"
       style={{
@@ -52,7 +52,7 @@ export default function SkillsPage() {
           {tools.map((tool, idx) => (
             <div
   key={idx}
-  className="group bg-white/5 transition-all duration-300 ease-in-out p-4 rounded-xl flex flex-col items-center justify-center text-center hover:bg-white/10 hover:shadow-spotify cursor-pointer"
+  className="group bg-gray-200  transition-all duration-300 ease-in-out p-4 rounded-xl flex flex-col items-center justify-center text-center hover:bg-gray-100  hover:shadow-spotify cursor-pointer"
 >
   <div className="w-16 h-16 mb-3 transition-transform group-hover:scale-105">
     <img
@@ -76,7 +76,7 @@ export default function SkillsPage() {
   </div>
   
   <div className="flex  gap-4 pb-2 ">
-    <div className=" bg-white/5 rounded-xl  shadow-lg hover:ring-1 hover:ring-green transform  duration-300 ease-in-out transition">
+    <div className=" bg-gray-200  rounded-xl  shadow-lg hover:ring-1 hover:ring-green transform  duration-300 ease-in-out transition">
       <img
         src={featured.image}
         alt={featured.title}
@@ -92,7 +92,7 @@ export default function SkillsPage() {
           {["React", "Redux Toolkit", "TailwindCSS"].map((tech) => (
             <span
               key={tech}
-              className="bg-white/10 text-white/80 text-xs px-2 py-1 rounded-full"
+              className="bg-gray-100  text-white/80 text-xs px-2 py-1 rounded-full"
             >
               {tech}
             </span>

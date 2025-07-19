@@ -26,7 +26,7 @@ const IconButton = ({ label, children, onClick }) => (
   </button>
 );
 
-const Player = () => {
+const Player = ({ fullscreen, setFullscreen }) => {
   const songs = data.songs || [];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -39,7 +39,6 @@ const Player = () => {
   const [volume, setVolume] = useState(60);
   const [micOn, setMicOn] = useState(false);
   const [lyricsOn, setLyricsOn] = useState(false);
-  const [fullscreen, setFullscreen] = useState(false);
   const [deviceConnected, setDeviceConnected] = useState(false);
   const [volHover, setVolHover] = useState(false);
 
@@ -170,10 +169,10 @@ const Player = () => {
   };
 
   return (
-    <section
+        <section
       className={`fixed bottom-0 left-0 w-full bg-black text-white z-50 px-3 sm:px-6
-      transition-all duration-300 ease-in-out 
-      ${fullscreen ? "h-14 opacity-90 overflow-hidden py-1" : "py-2 sm:py-3 opacity-100 h-auto"}`}
+        transition-all duration-300 ease-in-out
+        ${fullscreen ? "h-14 opacity-90 overflow-hidden py-1" : "py-2 sm:py-3 opacity-100 h-auto"}`}
     >
       <audio
         ref={audioRef}
@@ -411,9 +410,14 @@ const Player = () => {
           </IconButton>
 
           {/* Fullscreen toggle */}
-          <IconButton label="Exit Fullscreen" onClick={() => setFullscreen(false)}>
-            <Maximize2 className="w-5 h-5 text-[#1DB954]" />
-          </IconButton>
+ <IconButton
+        label={fullscreen ? "Exit Fullscreen" : "Fullscreen"}
+        onClick={() => setFullscreen(!fullscreen)}
+      >
+        <Maximize2
+          className={`w-5 h-5 ${fullscreen ? "text-[#1DB954]" : "opacity-80 hover:opacity-100"}`}
+        />
+      </IconButton>
         </div>
       )}
 
