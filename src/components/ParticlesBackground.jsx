@@ -8,7 +8,7 @@ export default function ParticlesBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-1 pointer-events-none">
+    <div className="absolute inset-0 z-0 pointer-events-none">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -26,7 +26,7 @@ export default function ParticlesBackground() {
             },
             modes: {
               grab: {
-                distance: 100,
+                distance: 500,
                 line_linked: {
                   opacity: 0.5,
                 },
@@ -35,7 +35,7 @@ export default function ParticlesBackground() {
           },
           particles: {
             number: {
-              value: 45,
+              value: 40,
               density: {
                 enable: true,
                 area: 1200,
@@ -46,19 +46,19 @@ export default function ParticlesBackground() {
               enable: true,
               distance: 100,
               color: "#ffffff",
-              opacity: 0.2,
-              width: 0.5,
+              opacity: 0.5,
+              width: 0.55,
             },
             move: {
               enable: true,
-              speed: 0.6,
+              speed: 0.8,
               direction: "none",
               outModes: {
                 default: "bounce",
               },
             },
             opacity: {
-              value: 0.3,
+              value: 0.5,
             },
             size: {
               value: { min: 0.1, max: 3 },
