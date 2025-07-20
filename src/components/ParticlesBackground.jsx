@@ -8,7 +8,7 @@ export default function ParticlesBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0 pointer-events-none">
+    <div className="absolute inset-0 z-1 pointer-events-none">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -58,7 +58,7 @@ export default function ParticlesBackground() {
               },
             },
             opacity: {
-              value: 0.5,
+              value: 0.3,
             },
             size: {
               value: { min: 0.1, max: 4 },
