@@ -35,7 +35,7 @@ const About = () => {
 
         {/* Bio */}
         <section className="px-4 sm:px-8 py-6">
-<p className="text-gray-400 text-md md:text-lg max-w-md mt-2">
+<p className="text-gray-400 text-md md:text-lg mt-2">
   I design and build responsive, user-friendly interfaces using React, Tailwind, and modern web tools. I care about clean code, meaningful UX, and bringing ideas to life with intention.
 </p>
 
