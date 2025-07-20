@@ -61,7 +61,7 @@ export default function ParticlesBackground() {
               value: 0.3,
             },
             size: {
-              value: { min: 0.1, max: 4 },
+              value: { min: 0.1, max: 3 },
             },
             shape: {
               type: "circle",
