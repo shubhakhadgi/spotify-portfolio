@@ -34,8 +34,8 @@ function App() {
   const lastScrollTop = useRef(0);
   const scrollDirectionCount = useRef({ down: 0, up: 0 });
 
-const SCROLL_THRESHOLD = 100;       
-const SCROLL_COUNT_THRESHOLD = 2;  
+const SCROLL_THRESHOLD = 500;       
+const SCROLL_COUNT_THRESHOLD = 3;  
 
 const handleScroll = (e) => {
   const scrollTop = e.target.scrollTop;
