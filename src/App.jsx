@@ -34,41 +34,41 @@ function App() {
   const lastScrollTop = useRef(0);
   const scrollDirectionCount = useRef({ down: 0, up: 0 });
 
-const SCROLL_THRESHOLD = 500;       
-const SCROLL_COUNT_THRESHOLD = 3;  
+  const SCROLL_THRESHOLD = 500;
+  const SCROLL_COUNT_THRESHOLD = 3;
 
-const handleScroll = (e) => {
-  const scrollTop = e.target.scrollTop;
-  const delta = scrollTop - lastScrollTop.current;
+  const handleScroll = (e) => {
+    const scrollTop = e.target.scrollTop;
+    const delta = scrollTop - lastScrollTop.current;
 
-  if (Math.abs(delta) < SCROLL_THRESHOLD) return;
+    if (Math.abs(delta) < SCROLL_THRESHOLD) return;
 
-  lastScrollTop.current = scrollTop <= 0 ? 0 : scrollTop;
+    lastScrollTop.current = scrollTop <= 0 ? 0 : scrollTop;
 
-  if (delta > 0) {
+    if (delta > 0) {
 
-    scrollDirectionCount.current.down += 1;
-    scrollDirectionCount.current.up = 0;
+      scrollDirectionCount.current.down += 1;
+      scrollDirectionCount.current.up = 0;
 
-    if (
-      scrollDirectionCount.current.down >= SCROLL_COUNT_THRESHOLD &&
-      playerFullscreen === false
-    ) {
-      setPlayerFullscreen(true);
+      if (
+        scrollDirectionCount.current.down >= SCROLL_COUNT_THRESHOLD &&
+        playerFullscreen === false
+      ) {
+        setPlayerFullscreen(true);
+      }
+    } else {
+
+      scrollDirectionCount.current.up += 1;
+      scrollDirectionCount.current.down = 0;
+
+      if (
+        scrollDirectionCount.current.up >= SCROLL_COUNT_THRESHOLD &&
+        playerFullscreen === true
+      ) {
+        setPlayerFullscreen(false);
+      }
     }
-  } else {
-
-    scrollDirectionCount.current.up += 1;
-    scrollDirectionCount.current.down = 0;
-
-    if (
-      scrollDirectionCount.current.up >= SCROLL_COUNT_THRESHOLD &&
-      playerFullscreen === true
-    ) {
-      setPlayerFullscreen(false);
-    }
-  }
-};
+  };
 
 
   const throttledHandleScroll = useThrottle(handleScroll, 100);
@@ -76,7 +76,12 @@ const handleScroll = (e) => {
   return (
     <div className="relative min-h-screen text-white overflow-hidden select-none">
       <ParticlesBackground />
-      <div className="absolute inset-0 z-[-1] bg-gradient-to-b from-black via-gray-900 to-black" />
+      <div
+        className="
+    absolute inset-0 z-[-1] bg-black 
+    dark:bg-gradient-to-r dark:from-light-skin dark:to-light-light-blue
+  "
+      />
 
       <div className="flex w-full overflow-x-hidden max-h-screen relative z-10">
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
